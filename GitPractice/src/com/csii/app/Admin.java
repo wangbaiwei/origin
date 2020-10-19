@@ -3,6 +3,8 @@ package com.csii.app;
 public class Admin {
 	private String sex;
 	
+	private String alias;
+	
 	private Integer id;
 	
 	private String name;
