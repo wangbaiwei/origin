@@ -1,6 +1,7 @@
 package com.csii.app;
 
 public class Admin {
+	private String sex;
 	
 	private Integer id;
 	
