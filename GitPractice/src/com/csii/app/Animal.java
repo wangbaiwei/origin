@@ -7,8 +7,5 @@ public class Animal {
 		
 		System.out.println("my name is wang");
 	}
-	
-	
-	
 
 }
