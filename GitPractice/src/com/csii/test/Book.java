@@ -7,10 +7,6 @@ public class Book {
 	private String sex;
 
 	private Integer age;
-	
-	private String id;
-	
-	private String love;
 
 	public String getName() {
 		return name;
