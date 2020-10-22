@@ -7,6 +7,8 @@ public class Book {
 	private String sex;
 
 	private Integer age;
+	
+	private String id;
 
 	public String getName() {
 		return name;
