@@ -9,6 +9,8 @@ public class Book {
 	private Integer age;
 	
 	private String id;
+	
+	private String love;
 
 	public String getName() {
 		return name;
