@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry excluding="com/csii/app/" kind="src" path="GitPractice/src"/>
+	<classpathentry kind="src" path="GitPractice/src/com/csii/app"/>
+	<classpathentry kind="output" path="GitPractice/bin"/>
+</classpath>
