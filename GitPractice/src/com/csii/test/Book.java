@@ -6,6 +6,8 @@ public class Book {
 
 	private String Name;
 	
+	private String sex;
+	
 	private Integer age;
 
 	public String getName() {
