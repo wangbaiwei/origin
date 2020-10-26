@@ -4,9 +4,9 @@ public class Book {
 
 	private String name;
 
-	private String SmallName;
+	private String Bigger_Name;
 	
-	private String sex;
+	private String Gender;
 	
 	private Integer age;
 
