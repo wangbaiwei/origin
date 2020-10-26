@@ -5,10 +5,6 @@ public class Book {
 	private String name;
 
 	private String sex;
-	
-	private String facet;
-	
-	private String author;
 
 	private Integer age;
 
