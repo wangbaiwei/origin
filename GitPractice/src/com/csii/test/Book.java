@@ -4,7 +4,7 @@ public class Book {
 
 	private String name;
 
-	private String BigName;
+	private String SmallName;
 	
 	private String sex;
 	
