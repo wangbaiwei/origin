@@ -4,8 +4,8 @@ public class Book {
 
 	private String name;
 
-	private String sex;
-
+	private String gender;
+	
 	private Integer age;
 
 	public String getName() {
@@ -14,14 +14,6 @@ public class Book {
 
 	public void setName(String name) {
 		this.name = name;
-	}
-
-	public String getSex() {
-		return sex;
-	}
-
-	public void setSex(String sex) {
-		this.sex = sex;
 	}
 
 	public Integer getAge() {
