@@ -6,7 +6,7 @@ public class Book {
 
 	private String Bigger_Name;
 	
-	public static String str_str_str_StringName;
+	public static String str_str_str_SexSex;
 	
 	private Integer age;
 
