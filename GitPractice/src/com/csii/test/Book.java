@@ -4,7 +4,7 @@ public class Book {
 
 	private String name;
 
-	private String Bigger_Name;
+	private String Small_Name;
 	
 	public static String undefinedunditinedlog4j;
 	
