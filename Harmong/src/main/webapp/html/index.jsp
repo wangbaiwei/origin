@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
         integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
-
 <body>
     <header>
         <a href="#" class="logo">Practice</a>
@@ -27,16 +26,15 @@
             <i class="fa fa-search" aria-hidden="true"></i>
         </div>
     </header>
+    <div class="left">
+    
+    </div>
     <div class="banner">
         <div class="content">
-            <h2>title</h2>
-            <p>
-				....
-            </p>
-            <a href="#">阅读全文</a>
+        	<form action="">
+        		<button onclick="look();">video</button>
+        	</form>
         </div>
-        
-        <img src="1.jpg" class="image">
     </div>
 </body>
 </html>
