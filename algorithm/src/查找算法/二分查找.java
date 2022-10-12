@@ -1,4 +1,4 @@
-package 链表;
+package 查找算法;
 
 public class 二分查找 {
 	
