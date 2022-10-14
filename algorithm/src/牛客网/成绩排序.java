@@ -25,6 +25,7 @@ public class 成绩排序 {
 
 	}
 
+	// 借助数组和Map可以完成 学生姓名+学生成绩 的排序
 	public void nameAndGradeSort() {
 		Scanner input = new Scanner(System.in);
 		while (input.hasNextLine()) {
