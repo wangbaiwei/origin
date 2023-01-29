@@ -4,7 +4,9 @@ import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
+import javax.sound.sampled.Port;
 import java.awt.*;
+import java.lang.reflect.InvocationTargetException;
 import java.util.Random;
 
 @Data
@@ -12,17 +14,18 @@ import java.util.Random;
 @Getter
 public class Tank {
 
-    private int x, y;
-    private Dir dir;
+    int x, y;
+    Dir dir;
     final static int SPEED = 5;
     public boolean moving = true;
     private TankFrame tankFrame;
-    public static int WIDTH = ResourceMgr.goodTankU.getWidth();
-    public static int HEIGHT = ResourceMgr.goodTankU.getHeight();
+    public static int WIDTH = ResourceMgr.getInstance().goodTankU.getWidth();
+    public static int HEIGHT = ResourceMgr.getInstance().goodTankU.getHeight();
     private boolean living = true;
     private Random random = new Random();
     private Group group = Group.BAD;
     private Rectangle rect = new Rectangle();
+    private FireStrategy fireStrategy;
 
     public Tank(int x, int y, Dir dir, TankFrame tankFrame, Group group) {
         this.group = group;
@@ -34,6 +37,37 @@ public class Tank {
         rect.y = this.y;
         rect.width = WIDTH;
         rect.height = HEIGHT;
+        if (group == Group.GOOD) {
+            String goodFs = (String)PropertyMgr.get("goodFs");
+            try {
+                fireStrategy = (FourDirFireStrategy) Class.forName(goodFs).getConstructor().newInstance();
+            } catch (InstantiationException e) {
+                e.printStackTrace();
+            } catch (IllegalAccessException e) {
+                e.printStackTrace();
+            } catch (InvocationTargetException e) {
+                e.printStackTrace();
+            } catch (NoSuchMethodException e) {
+                e.printStackTrace();
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+        } else {
+            String badFs = (String)PropertyMgr.get("badFs");
+            try {
+                fireStrategy = (DefaultFireStrategy)Class.forName(badFs).getConstructor().newInstance();
+            } catch (InstantiationException e) {
+                e.printStackTrace();
+            } catch (IllegalAccessException e) {
+                e.printStackTrace();
+            } catch (InvocationTargetException e) {
+                e.printStackTrace();
+            } catch (NoSuchMethodException e) {
+                e.printStackTrace();
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+        };
     }
 
     public void paint(Graphics g) {
@@ -42,16 +76,16 @@ public class Tank {
 
         switch (dir) {
             case LEFT:
-                g.drawImage(this.group == Group.GOOD ? ResourceMgr.goodTankL : ResourceMgr.badTankL, x, y, null);
+                g.drawImage(this.group == Group.GOOD ? ResourceMgr.getInstance().goodTankL : ResourceMgr.getInstance().badTankL, x, y, null);
                 break;
             case RIGHT:
-                g.drawImage(this.group == Group.GOOD ? ResourceMgr.goodTankR : ResourceMgr.badTankR, x, y, null);
+                g.drawImage(this.group == Group.GOOD ? ResourceMgr.getInstance().goodTankR : ResourceMgr.getInstance().badTankR, x, y, null);
                 break;
             case UP:
-                g.drawImage(this.group == Group.GOOD ? ResourceMgr.goodTankU : ResourceMgr.badTankU, x, y, null);
+                g.drawImage(this.group == Group.GOOD ? ResourceMgr.getInstance().goodTankU : ResourceMgr.getInstance().badTankU, x, y, null);
                 break;
             case DOWN:
-                g.drawImage(this.group == Group.GOOD ? ResourceMgr.goodTankD : ResourceMgr.badTankD, x, y, null);
+                g.drawImage(this.group == Group.GOOD ? ResourceMgr.getInstance().goodTankD : ResourceMgr.getInstance().badTankD, x, y, null);
                 break;
         }
         move();
@@ -107,10 +141,10 @@ public class Tank {
         }
     }
 
+
     public void fire() {
-        int bx = this.x + Tank.WIDTH / 2 - Bullet.WIDTH / 2;
-        int by = this.y + Tank.HEIGHT / 2 - Bullet.HEIGHT / 2;
-        this.tankFrame.bullets.add(new Bullet(bx, by, this.dir, tankFrame, this.group));
+        fireStrategy.fire(this);
+
     }
 
     public void die() {

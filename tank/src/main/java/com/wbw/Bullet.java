@@ -7,8 +7,8 @@ public class Bullet {
     private int x, y;
     private Dir dir;
 
-    public static int WIDTH = ResourceMgr.bulletL.getWidth();
-    public static int HEIGHT = ResourceMgr.bulletL.getHeight();
+    public static int WIDTH = ResourceMgr.getInstance().bulletL.getWidth();
+    public static int HEIGHT = ResourceMgr.getInstance().bulletL.getHeight();
     private boolean living = true;
     private TankFrame tf;
     private Group group = Group.BAD;
@@ -26,6 +26,7 @@ public class Bullet {
         rect.y = this.y;
         rect.width = WIDTH;
         rect.height = HEIGHT;
+        this.tf.bullets.add(this);
     }
 
     public void paint(Graphics g) {
@@ -34,16 +35,16 @@ public class Bullet {
         }
         switch (dir) {
             case LEFT:
-                g.drawImage(ResourceMgr.bulletL, x, y, null);
+                g.drawImage(ResourceMgr.getInstance().bulletL, x, y, null);
                 break;
             case RIGHT:
-                g.drawImage(ResourceMgr.bulletR, x, y, null);
+                g.drawImage(ResourceMgr.getInstance().bulletR, x, y, null);
                 break;
             case UP:
-                g.drawImage(ResourceMgr.bulletU, x, y, null);
+                g.drawImage(ResourceMgr.getInstance().bulletU, x, y, null);
                 break;
             case DOWN:
-                g.drawImage(ResourceMgr.bulletD, x, y, null);
+                g.drawImage(ResourceMgr.getInstance().bulletD, x, y, null);
                 break;
         }
         move();
