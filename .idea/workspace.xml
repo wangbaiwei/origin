@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="60d037e2-4fc8-4710-85ab-609b3756bd6c" name="变更" comment="包修改">
-      <change beforePath="$PROJECT_DIR$/algorithm/algorithm/com/csii/wbw/Demo1.java" beforeDir="false" afterPath="$PROJECT_DIR$/algorithm/algorithm/com/csii/wbw/Demo1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tank/src/tank/java/com/wbw/DefaultFireStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/tank/src/tank/java/com/wbw/DefaultFireStrategy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tank/src/tank/java/com/wbw/Explored.java" beforeDir="false" afterPath="$PROJECT_DIR$/tank/src/tank/java/com/wbw/Explored.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tank/tank.iml" beforeDir="false" />
-    </list>
+    <list default="true" id="60d037e2-4fc8-4710-85ab-609b3756bd6c" name="变更" comment="包修改" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,7 +45,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="应用程序.Main">
     <configuration name="Demo1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.csii.wbw.Demo1" />
       <module name="Study" />
@@ -64,8 +59,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.wbw.Main" />
+      <module name="tank" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.wbw.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="应用程序.Main" />
         <item itemvalue="应用程序.Demo1" />
       </list>
     </recent_temporary>
@@ -79,7 +88,7 @@
       <option name="presentableId" value="Default" />
       <updated>1675342415022</updated>
       <workItem from="1675342419817" duration="313000" />
-      <workItem from="1675342814083" duration="4429000" />
+      <workItem from="1675342814083" duration="4736000" />
     </task>
     <task id="LOCAL-00001" summary="包修改">
       <created>1675343693844</created>
@@ -88,7 +97,35 @@
       <option name="project" value="LOCAL" />
       <updated>1675343693844</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="包修改">
+      <created>1675347541441</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1675347541441</updated>
+    </task>
+    <task id="LOCAL-00003" summary="包修改">
+      <created>1675347566685</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1675347566685</updated>
+    </task>
+    <task id="LOCAL-00004" summary="包修改">
+      <created>1675347700906</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1675347700906</updated>
+    </task>
+    <task id="LOCAL-00005" summary="包修改">
+      <created>1675347723598</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1675347723598</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
