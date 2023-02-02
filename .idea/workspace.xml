@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="60d037e2-4fc8-4710-85ab-609b3756bd6c" name="变更" comment="包修改">
       <change beforePath="$PROJECT_DIR$/algorithm/algorithm/com/csii/wbw/Demo1.java" beforeDir="false" afterPath="$PROJECT_DIR$/algorithm/algorithm/com/csii/wbw/Demo1.java" afterDir="false" />
@@ -17,6 +20,14 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$PROJECT_DIR$/../java/apache-maven-3.8.1" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
   </component>
   <component name="ProjectId" id="2LBRIv5u3UcsJXvzpCeNiZTDHfT" />
   <component name="ProjectViewState">
