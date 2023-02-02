@@ -4,6 +4,7 @@ import com.wbw.abstractfactory.BaseExplode;
 
 import java.awt.*;
 
+
 public class Explored extends BaseExplode {
     private int x, y;
     public static int WIDTH = ResourceMgr.getInstance().exploreds[0].getWidth();

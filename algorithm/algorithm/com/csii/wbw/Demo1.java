@@ -1,7 +1,8 @@
 package com.csii.wbw;
 
-import java.util.TreeMap;
-import java.util.TreeSet;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 public class Demo1 {
 
@@ -17,22 +18,23 @@ public class Demo1 {
         String message = "vkbs bs t suepuv";
 
 
-        TreeMap<Character, Character> treeMap = new TreeMap<>();
-        char[] chars = key.toCharArray();
+        Map<Character, Character> hashMap = new LinkedHashMap<>();
+        char[] keys = key.toCharArray();
         int l = 0;
-        for (int i = 0; i < chars.length; i++) {
-            if (treeMap.get(chars[i]) != null) {
-                treeMap.put(chars[i], Character.valueOf((char)('a' + l++)));
+        for (int i = 0; i < keys.length; i++) {
+            if (!hashMap.containsKey(keys[i]) && keys[i] != ' ') {
+                hashMap.put(keys[i], Character.valueOf((char) ('a' + l++)));
             }
         }
+        hashMap.forEach((k, v) -> System.out.print(k + " "));
+        System.out.println();
+        hashMap.forEach((k, v) -> System.out.print(v + " "));
+
         StringBuffer stringBuffer = new StringBuffer();
-
         char[] messages = message.toCharArray();
-
         for (int i = 0; i < messages.length; i++) {
-            stringBuffer.append(treeMap.get(messages[i]));
+            stringBuffer.append(hashMap.getOrDefault(messages[i], ' '));
         }
-        System.out.println(stringBuffer);
 
     }
 
