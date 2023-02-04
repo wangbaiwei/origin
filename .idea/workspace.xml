@@ -4,11 +4,200 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="60d037e2-4fc8-4710-85ab-609b3756bd6c" name="变更" comment="包修改" />
+    <list default="true" id="60d037e2-4fc8-4710-85ab-609b3756bd6c" name="变更" comment="包修改">
+      <change afterPath="$PROJECT_DIR$/Practice/Practice.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practice/algorithm/algorithm.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Practice/design_pattern/design_pattern.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/spring-boot-web/spring-boot-web.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tank/src/tank/java/com/wbw/abstractfactory/RectTank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Study.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Study.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practice/algorithm/target/classes/com/test/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/Practice/algorithm/target/classes/com/test/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practice/algorithm/target/test-classes/com/test/AppTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Practice/algorithm/target/test-classes/com/test/AppTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practice/algorithm/target/test-classes/com/test/BiggerThanRightTwice.class" beforeDir="false" afterPath="$PROJECT_DIR$/Practice/algorithm/target/test-classes/com/test/BiggerThanRightTwice.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practice/algorithm/target/test-classes/com/test/Demo.class" beforeDir="false" afterPath="$PROJECT_DIR$/Practice/algorithm/target/test-classes/com/test/Demo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practice/algorithm/target/test-classes/com/test/MMAPTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Practice/algorithm/target/test-classes/com/test/MMAPTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practice/algorithm/target/test-classes/com/test/MergeSortingTest2.class" beforeDir="false" afterPath="$PROJECT_DIR$/Practice/algorithm/target/test-classes/com/test/MergeSortingTest2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Practice/algorithm/target/test-classes/com/test/SmallSum.class" beforeDir="false" afterPath="$PROJECT_DIR$/Practice/algorithm/target/test-classes/com/test/SmallSum.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Harmong/config/config.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Harmong/db.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Study/com/csii/stream/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Study/com/csii/stream/StreamApi.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Study/com/csii/stream/StreamApi2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Study/com/csii/stream/StreamApi3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Study/com/csii/wbw/Demo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Study/com/csii/wbw/ListNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Study/com/csii/wbw/MergeSortingTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Study/com/csii/wbw/MergeSortingTest2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Study/com/csii/wbw/Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Study/com/csii/wbw/PrimerTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Study/com/csii/wbw/QueueSplicingStack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Study/com/csii/wbw/StackSplicingQueue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Study/com/csii/wbw/StrAdd.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Study/com/csii/wbw/StrLen.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Study/com/csii/wbw/TreeMapTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Study/com/csii/wbw/ValueToTest$1Zuo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Study/com/csii/wbw/ValueToTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Study/com/csii/wbw/三个数的和.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Study/com/csii/wbw/单链表反转$Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Study/com/csii/wbw/单链表反转.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Study/com/csii/wbw/数字反转.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Study/com/csii/wbw/有效的括号.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Study/com/csii/wbw/火车进站.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Study/com/csii/wbw/罗马数字转整数$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Study/com/csii/wbw/罗马数字转整数.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Study/com/csii/wbw/链表合并.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/production/Study/LinkedList/ListReversal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/production/Study/algorithm.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/production/Study/com/csii/stream/Person.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/production/Study/com/csii/stream/StreamApi.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/production/Study/com/csii/stream/StreamApi2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/production/Study/com/csii/stream/StreamApi3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/production/Study/com/csii/wbw/Demo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/production/Study/com/csii/wbw/Demo1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/production/Study/com/csii/wbw/DigitalReversal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/production/Study/com/csii/wbw/LinkedListMerge.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/production/Study/com/csii/wbw/ListNode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/production/Study/com/csii/wbw/MergeSortingTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/production/Study/com/csii/wbw/MergeSortingTest2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/production/Study/com/csii/wbw/Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/production/Study/com/csii/wbw/PrimerTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/production/Study/com/csii/wbw/QueueSplicingStack.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/production/Study/com/csii/wbw/SingletonListReverse$Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/production/Study/com/csii/wbw/SingletonListReverse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/production/Study/com/csii/wbw/StackSplicingQueue.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/production/Study/com/csii/wbw/StrAdd.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/production/Study/com/csii/wbw/StrLen.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/production/Study/com/csii/wbw/SumOfThreeNum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/production/Study/com/csii/wbw/TrainEntersTheStation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/production/Study/com/csii/wbw/TreeMapTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/production/Study/com/csii/wbw/TurnRomanNumeralsIntoIntegers$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/production/Study/com/csii/wbw/TurnRomanNumeralsIntoIntegers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/production/Study/com/csii/wbw/ValidParentheses.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/production/Study/com/csii/wbw/ValueToTest$1Zuo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/production/Study/com/csii/wbw/ValueToTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/production/Study/com/wbw/Dir.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/production/Study/com/wbw/Group.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/production/Study/com/wbw/abstractfactory/BaseBullet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/production/Study/com/wbw/abstractfactory/BaseExplode.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/production/Study/com/wbw/abstractfactory/BaseTank.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/production/Study/com/wbw/abstractfactory/DefaultFacotry.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/production/Study/com/wbw/abstractfactory/GameFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/production/Study/find/BinarySearch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/src/tank/java/com/wbw/Bullet.java" beforeDir="false" afterPath="$PROJECT_DIR$/tank/src/tank/java/com/wbw/abstractfactory/RectBullet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/src/tank/java/com/wbw/DefaultFireStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/tank/src/tank/java/com/wbw/DefaultFireStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/src/tank/java/com/wbw/Explored.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/src/tank/java/com/wbw/FireStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/tank/src/tank/java/com/wbw/FireStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/src/tank/java/com/wbw/FourDirFireStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/tank/src/tank/java/com/wbw/FourDirFireStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/src/tank/java/com/wbw/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/tank/src/tank/java/com/wbw/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/src/tank/java/com/wbw/TankFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/tank/src/tank/java/com/wbw/TankFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/src/tank/java/com/wbw/abstractfactory/BaseBullet.java" beforeDir="false" afterPath="$PROJECT_DIR$/tank/src/tank/java/com/wbw/abstractfactory/BaseBullet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/src/tank/java/com/wbw/abstractfactory/BaseTank.java" beforeDir="false" afterPath="$PROJECT_DIR$/tank/src/tank/java/com/wbw/abstractfactory/BaseTank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/src/tank/java/com/wbw/abstractfactory/DefaultFacotry.java" beforeDir="false" afterPath="$PROJECT_DIR$/tank/src/tank/java/com/wbw/abstractfactory/DefaultFacotry.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/src/tank/java/com/wbw/abstractfactory/RectFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/tank/src/tank/java/com/wbw/abstractfactory/RectFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/src/tank/java/com/wbw/abstractfactory/RextExplode.java" beforeDir="false" afterPath="$PROJECT_DIR$/tank/src/tank/java/com/wbw/abstractfactory/RectExplode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/tank.iml" beforeDir="false" afterPath="$PROJECT_DIR$/tank/tank.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/audio/explode.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/audio/tank_fire.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/audio/tank_move.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/audio/war1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/com/wbw/Audio.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/com/wbw/Bullet$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/com/wbw/Bullet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/com/wbw/DefaultFireStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/com/wbw/Dir.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/com/wbw/Explored.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/com/wbw/FireStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/com/wbw/FourDirFireStrategy.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/com/wbw/Group.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/com/wbw/ImageUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/com/wbw/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/com/wbw/PropertyMgr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/com/wbw/ResourceMgr$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/com/wbw/ResourceMgr$Instance.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/com/wbw/ResourceMgr.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/com/wbw/Tank$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/com/wbw/Tank.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/com/wbw/TankFrame$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/com/wbw/TankFrame$MyKeyListener.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/com/wbw/TankFrame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/config.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/images/0.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/images/1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/images/10.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/images/2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/images/3.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/images/4.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/images/5.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/images/6.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/images/7.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/images/8.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/images/9.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/images/BadTank1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/images/BadTank2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/images/GoodTank1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/images/GoodTank2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/images/bulletD.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/images/bulletL.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/images/bulletR.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/images/bulletU.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/images/bulletU.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/images/e1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/images/e10.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/images/e11.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/images/e12.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/images/e13.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/images/e14.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/images/e15.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/images/e16.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/images/e2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/images/e3.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/images/e4.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/images/e5.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/images/e6.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/images/e7.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/images/e8.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/images/e9.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/images/missileLD.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/images/missileLU.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/images/missileRD.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/images/missileRU.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/images/square0.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/images/square1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/images/square2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/images/square3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/images/square4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/images/square5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/images/square6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/images/tank.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/images/tankD.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/images/tankL.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/images/tankLD.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/images/tankLU.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/images/tankR.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/images/tankRD.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/images/tankRU.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/classes/images/tankU.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/test-classes/com/wbw/AppTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/test-classes/com/wbw/BufferedImageTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tank/target/test-classes/com/wbw/IteratorTest.class" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -25,6 +214,9 @@
     </option>
   </component>
   <component name="ProjectId" id="2LBRIv5u3UcsJXvzpCeNiZTDHfT" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -38,48 +230,60 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SpringBoot" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/tank" />
     <property name="project.structure.last.edited" value="模块" />
     <property name="project.structure.proportion" value="0.20259741" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="project.structure.side.proportion" value="0.37156862" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
-  <component name="RunManager" selected="应用程序.Main">
-    <configuration name="Demo1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.csii.wbw.Demo1" />
-      <module name="Study" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.csii.wbw.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.wbw.abstractfactory" />
+    </key>
+  </component>
+  <component name="RunManager" selected="应用程序.tank">
+    <configuration name="tank" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.wbw.Main" />
       <module name="tank" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.wbw.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SpringBootJdbcApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="spring-boot-start" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.study.demo.SpringBootJdbcApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SpringBootWebApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="spring-boot-web" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.study.main.SpringBootWebApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.SpringBootJdbcApplication" />
+      <item itemvalue="Spring Boot.SpringBootWebApplication" />
+      <item itemvalue="应用程序.tank" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="应用程序.Main" />
-        <item itemvalue="应用程序.Demo1" />
+        <item itemvalue="应用程序.tank" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\Youth\AppData\Roaming\Subversion</configuration>
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="默认任务">
       <changelist id="60d037e2-4fc8-4710-85ab-609b3756bd6c" name="变更" comment="" />
@@ -88,7 +292,9 @@
       <option name="presentableId" value="Default" />
       <updated>1675342415022</updated>
       <workItem from="1675342419817" duration="313000" />
-      <workItem from="1675342814083" duration="4736000" />
+      <workItem from="1675342814083" duration="11110000" />
+      <workItem from="1675486522514" duration="5289000" />
+      <workItem from="1675501260225" duration="1445000" />
     </task>
     <task id="LOCAL-00001" summary="包修改">
       <created>1675343693844</created>
@@ -125,7 +331,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675347723598</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="包修改">
+      <created>1675348333152</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1675348333152</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,7 +357,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="包修改" />
-    <option name="LAST_COMMIT_MESSAGE" value="包修改" />
+    <option name="LAST_COMMIT_MESSAGE" value="" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -158,7 +371,16 @@
           </properties>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/tank/src/tank/java/com/wbw/ResourceMgr.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

@@ -1,5 +1,7 @@
 package com.wbw;
 
+import com.wbw.abstractfactory.RectTank;
+
 public class Main {
 
     public static void main(String[] args) throws InterruptedException {
@@ -9,7 +11,7 @@ public class Main {
         int count = initTankount == null ? 5 : Integer.parseInt(initTankount + "");
         // 初始化敌方坦克
         for (int i = 0; i <count; i++) {
-            tf.tanks.add(new Tank(200 + i * 80, 200, Dir.DOWN, tf, Group.BAD));
+            tf.tanks.add(new RectTank(200 + i * 80, 200, Dir.DOWN, tf, Group.BAD));
         }
 
         while (true) {

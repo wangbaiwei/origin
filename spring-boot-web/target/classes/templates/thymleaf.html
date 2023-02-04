@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>thymleaf</title>
+</head>
+<body>
+	<p th:text="${thName}"></p>
+	<p th:text="${thAge}"></p>
+	<p th:text="${thSex}"></p>
+	<p th:text="${thLove}"></p>
+	<div th:object="${thObject}">
+		<p>name:<span th:text="*{name}"></span></p>
+		<p>age:<span th:text="*{age}"></span></p>
+		<p>sex:<span th:text="*{sex}"></span></p>
+	</div>
+</body>
+</html>

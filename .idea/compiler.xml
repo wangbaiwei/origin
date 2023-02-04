@@ -7,11 +7,26 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="spring-boot-web" />
         <module name="tank" />
+        <module name="design_pattern" />
+        <module name="spring-boot-start" />
+        <module name="algorithm" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="algorithm" target="9" />
+      <module name="design_pattern" target="1.7" />
+      <module name="Practice" target="1.5" />
+      <module name="spring-boot-start" target="11" />
+      <module name="spring-boot-web" target="11" />
       <module name="tank" target="8" />
     </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="spring-boot-start" options="-parameters" />
+      <module name="spring-boot-web" options="-parameters" />
+    </option>
   </component>
 </project>

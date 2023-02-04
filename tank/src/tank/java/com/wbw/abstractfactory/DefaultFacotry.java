@@ -5,14 +5,14 @@ import com.wbw.*;
 public class DefaultFacotry extends GameFactory{
     @Override
     public BaseBullet creteateBullet(int x, int y, Dir dir, Group group, TankFrame tf) {
-        return new Bullet(x, y, dir, tf, group);
+        return new RectBullet(x, y, dir, tf, group);
 
 
     }
 
     @Override
     public BaseExplode creteateExplode(int x, int y, TankFrame tf) {
-        return new Explored(x, y, tf);
+        return new RectExplode(x, y, tf);
     }
 
     @Override

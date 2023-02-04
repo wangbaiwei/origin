@@ -1,8 +1,6 @@
 package com.wbw;
 
-import com.wbw.abstractfactory.BaseExplode;
-import com.wbw.abstractfactory.DefaultFacotry;
-import com.wbw.abstractfactory.GameFactory;
+import com.wbw.abstractfactory.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -20,10 +18,11 @@ public class TankFrame extends Frame {
 
     private Tank myTank = new Tank(200, 400, Dir.DOWN, this, Group.GOOD);
     private List<BaseExplode> exploreds = new ArrayList<>();
-    static final int GAME_WIDTH = 800, GAME_HEIGH = 600;
-    public List<Bullet> bullets = new ArrayList<>();
-    List<Tank> tanks = new ArrayList<>();
-    GameFactory gameFactory = new DefaultFacotry();
+    public static final int GAME_WIDTH = 800;
+    public static final int GAME_HEIGH = 600;
+    public List<BaseBullet> bullets = new ArrayList<>();
+    public List<RectTank> tanks = new ArrayList<>();
+    public GameFactory gameFactory = new RectFactory();
 
 
     public TankFrame() {
