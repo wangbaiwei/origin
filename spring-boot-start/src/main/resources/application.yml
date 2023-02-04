@@ -1,10 +1,0 @@
-server:
-  port: 8081
-  
-person: 
-  last_name: 张三
-  age: 8081
-  sex: 男
-  email: 15109349012
-  
-spring:  profiles:    active: test

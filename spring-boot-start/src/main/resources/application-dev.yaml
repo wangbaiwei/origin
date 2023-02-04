@@ -1,8 +1,0 @@
-server:
-  port: 8089
-  
-person: 
-  last_name: 张三
-  age: 8089
-  sex: 男
-  email: 15109349012
