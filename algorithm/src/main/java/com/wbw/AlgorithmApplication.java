@@ -1,4 +1,4 @@
-package com.wbw.algorithm;
+package com.wbw;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
