@@ -1,4 +1,4 @@
-package com.wbw.algorithm;
+package com.wbw.algorithm.presum;
 
 
 import lombok.Getter;
