@@ -1,5 +1,10 @@
 package com.wbw.algorithm.common;
 
+import com.wbw.algorithm.heap.Heap;
+
+import java.lang.reflect.InvocationTargetException;
+import java.util.Arrays;
+
 public class CommonUtil {
 
 
@@ -17,4 +22,10 @@ public class CommonUtil {
         arr[i] = arr[j];
         arr[j] = tmp;
     }
+
+    public static void print(int[] arr) {
+        System.out.println(Arrays.toString(arr));
+    }
+
+
 }
