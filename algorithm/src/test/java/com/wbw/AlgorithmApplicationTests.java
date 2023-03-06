@@ -8,6 +8,8 @@ class AlgorithmApplicationTests {
 
     @Test
     void contextLoads() {
+
+        System.out.println("hello\nworld");
     }
 
 }
