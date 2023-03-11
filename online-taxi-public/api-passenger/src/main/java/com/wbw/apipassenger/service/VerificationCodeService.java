@@ -1,6 +1,7 @@
 package com.wbw.apipassenger.service;
 
 import com.wbw.apipassenger.remote.ServiceVerificationcodeClient;
+import com.wbw.apipassenger.response.TokenResponse;
 import com.wbw.internalcommon.dto.ResponseResult;
 import com.wbw.internalcommon.response.NumberCodeResponse;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,6 +34,35 @@ public class VerificationCodeService {
 
         // 通过短信服务商，将对应的验证码发送到手机上，以阿里短信服务，腾讯短信通，华信，客联
         return ResponseResult.success("");
+
+    }
+
+
+    /**
+     * 校验验证码
+     * @param passengerPhone 手机号
+     * @param verificatoinCode 验证码
+     * @return
+     */
+    public ResponseResult checkCode(String passengerPhone, String verificatoinCode) {
+        // 根据手机号到redis读取验证码
+        System.out.println("根据手机号到redis读取验证码");
+
+        // 校验验证码
+        System.out.println("校验验证码");
+
+        // 判断原来是否有用户，并进行对应的处理
+        System.out.println("判断原来是否有用户，并进行对应的处理");
+
+        // 颁发令牌
+        System.out.println("颁发令牌");
+
+
+        // 响应token
+        TokenResponse tokenResponse = new TokenResponse();
+        tokenResponse.setToken("token value");
+        return ResponseResult.success(tokenResponse);
+
 
     }
 }

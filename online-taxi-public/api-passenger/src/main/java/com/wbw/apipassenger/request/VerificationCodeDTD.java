@@ -4,5 +4,8 @@ import lombok.Data;
 
 @Data
 public class VerificationCodeDTD {
-    public String passengerPhone;
+
+    private String passengerPhone;
+
+    private String verificationCode;
 }
