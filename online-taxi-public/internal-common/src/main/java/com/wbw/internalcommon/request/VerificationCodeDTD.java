@@ -1,4 +1,4 @@
-package com.wbw.apipassenger.request;
+package com.wbw.internalcommon.request;
 
 import lombok.Data;
 

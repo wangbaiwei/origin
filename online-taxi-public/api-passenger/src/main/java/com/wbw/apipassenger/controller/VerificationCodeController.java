@@ -1,6 +1,6 @@
 package com.wbw.apipassenger.controller;
 
-import com.wbw.apipassenger.request.VerificationCodeDTD;
+import com.wbw.internalcommon.request.VerificationCodeDTD;
 import com.wbw.apipassenger.service.VerificationCodeService;
 import com.wbw.internalcommon.dto.ResponseResult;
 import org.springframework.beans.factory.annotation.Autowired;
