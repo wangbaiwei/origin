@@ -3,10 +3,12 @@ package com.wbw.apipassenger.service;
 import com.wbw.apipassenger.remote.ServicePassengerUserClient;
 import com.wbw.apipassenger.remote.ServiceVerificationcodeClient;
 import com.wbw.apipassenger.response.TokenResponse;
+import com.wbw.internalcommon.constant.IdentityConstant;
 import com.wbw.internalcommon.dto.ResponseResult;
-import com.wbw.internalcommon.internalcommon.constant.CommonStatusEnum;
+import com.wbw.internalcommon.constant.CommonStatusEnum;
 import com.wbw.internalcommon.request.VerificationCodeDTD;
 import com.wbw.internalcommon.response.NumberCodeResponse;
+import com.wbw.internalcommon.utils.JwtUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
@@ -80,8 +82,8 @@ public class VerificationCodeService {
         verificationCodeDTD.setPassengerPhone(passengerPhone);
         servicePassengerUserClient.loginOrRegister(verificationCodeDTD);
 
-        // 颁发令牌
-        System.out.println("颁发令牌");
+        // 颁发令牌，不应该用魔法值，用常量
+        JwtUtils.generatorToken(passengerPhone, IdentityConstant.PASSENGER_IDENTITY);
 
 
         // 响应token

@@ -1,6 +1,6 @@
 package com.wbw.internalcommon.dto;
 
-import com.wbw.internalcommon.internalcommon.constant.CommonStatusEnum;
+import com.wbw.internalcommon.constant.CommonStatusEnum;
 import lombok.Data;
 import lombok.experimental.Accessors;
 

@@ -1,4 +1,4 @@
-package com.wbw.internalcommon.internalcommon.constant;
+package com.wbw.internalcommon.constant;
 
 import lombok.Data;
 import lombok.Getter;
