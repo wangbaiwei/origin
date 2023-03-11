@@ -19,7 +19,8 @@ public class UserController {
         System.out.println("user service ");
         String passengerPhone = verificationCodeDTD.getPassengerPhone();
         System.out.println("乘客的手机号：" + passengerPhone);
-        return ResponseResult.success();
+        ResponseResult responseResult = userService.loginOrRegister(passengerPhone);
+        return responseResult;
     }
 
 
