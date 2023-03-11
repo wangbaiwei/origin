@@ -1,9 +1,11 @@
 package com.wbw.apipassenger.service;
 
+import com.wbw.apipassenger.remote.ServicePassengerUserClient;
 import com.wbw.apipassenger.remote.ServiceVerificationcodeClient;
 import com.wbw.apipassenger.response.TokenResponse;
 import com.wbw.internalcommon.dto.ResponseResult;
 import com.wbw.internalcommon.internalcommon.constant.CommonStatusEnum;
+import com.wbw.internalcommon.request.VerificationCodeDTD;
 import com.wbw.internalcommon.response.NumberCodeResponse;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +19,9 @@ public class VerificationCodeService {
 
     @Autowired
     private ServiceVerificationcodeClient serviceVerificationcodeClient;
+
+    @Autowired
+    private ServicePassengerUserClient servicePassengerUserClient;
 
     // 乘客验证码前缀
     private String verificationCodePrefix = "passenger-verification-code-";
@@ -71,7 +76,9 @@ public class VerificationCodeService {
         }
 
         // 判断原来是否有用户，并进行对应的处理
-        System.out.println("判断原来是否有用户，并进行对应的处理");
+        VerificationCodeDTD verificationCodeDTD = new VerificationCodeDTD();
+        verificationCodeDTD.setPassengerPhone(passengerPhone);
+        servicePassengerUserClient.loginOrRegister(verificationCodeDTD);
 
         // 颁发令牌
         System.out.println("颁发令牌");
