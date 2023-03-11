@@ -3,9 +3,9 @@ package com.wbw.apipassenger.service;
 import com.wbw.apipassenger.remote.ServicePassengerUserClient;
 import com.wbw.apipassenger.remote.ServiceVerificationcodeClient;
 import com.wbw.apipassenger.response.TokenResponse;
+import com.wbw.internalcommon.constant.CommonStatusEnum;
 import com.wbw.internalcommon.constant.IdentityConstant;
 import com.wbw.internalcommon.dto.ResponseResult;
-import com.wbw.internalcommon.constant.CommonStatusEnum;
 import com.wbw.internalcommon.request.VerificationCodeDTD;
 import com.wbw.internalcommon.response.NumberCodeResponse;
 import com.wbw.internalcommon.utils.JwtUtils;
@@ -28,6 +28,9 @@ public class VerificationCodeService {
     // 乘客验证码前缀
     private String verificationCodePrefix = "passenger-verification-code-";
 
+    //
+    private String tokenPrefix = "token_";
+
     @Autowired
     private StringRedisTemplate stringRedisTemplate;
 
@@ -47,8 +50,27 @@ public class VerificationCodeService {
 
     }
 
+    /**
+     * 根据手机号生成key
+     *
+     * @param passengerPhone
+     * @return
+     */
     private String generatorKeyByPhone(String passengerPhone) {
         return verificationCodePrefix + passengerPhone;
+    }
+
+    /**
+     * 根据手机号和身份标识生成token
+     *
+     * @param phone
+     * @param identity
+     * @return
+     */
+    private String generatorTokenKey(String phone, String identity) {
+
+        return tokenPrefix + phone + "_" + identity;
+
     }
 
 
@@ -84,6 +106,10 @@ public class VerificationCodeService {
 
         // 颁发令牌，不应该用魔法值，用常量
         String token = JwtUtils.generatorToken(passengerPhone, IdentityConstant.PASSENGER_IDENTITY);
+
+        // 将token存入到redis中
+        String tokenKey = generatorTokenKey(passengerPhone, IdentityConstant.PASSENGER_IDENTITY);
+        stringRedisTemplate.opsForValue().set(tokenKey, token, 30, TimeUnit.DAYS);
 
 
         // 响应token
