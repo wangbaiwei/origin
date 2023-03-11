@@ -35,7 +35,7 @@ public class VerificationCodeService {
 
         // 调用验证码服务，获取验证码
         System.out.println("调用验证码服务，获取验证码");
-        ResponseResult<NumberCodeResponse> numberCodeResponse = serviceVerificationcodeClient.getNumberCode(10);
+        ResponseResult<NumberCodeResponse> numberCodeResponse = serviceVerificationcodeClient.getNumberCode(6);
         int numberCode = numberCodeResponse.getData().getNumberCode();
         System.out.println("remote number code: " + numberCode);
 
@@ -83,12 +83,12 @@ public class VerificationCodeService {
         servicePassengerUserClient.loginOrRegister(verificationCodeDTD);
 
         // 颁发令牌，不应该用魔法值，用常量
-        JwtUtils.generatorToken(passengerPhone, IdentityConstant.PASSENGER_IDENTITY);
+        String token = JwtUtils.generatorToken(passengerPhone, IdentityConstant.PASSENGER_IDENTITY);
 
 
         // 响应token
         TokenResponse tokenResponse = new TokenResponse();
-        tokenResponse.setToken("token value");
+        tokenResponse.setToken(token);
         return ResponseResult.success(tokenResponse);
 
 

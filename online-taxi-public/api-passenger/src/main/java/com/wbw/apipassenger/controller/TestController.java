@@ -1,5 +1,6 @@
 package com.wbw.apipassenger.controller;
 
+import com.wbw.internalcommon.dto.ResponseResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -10,4 +11,22 @@ public class TestController {
     public String test() {
         return "test api passenger";
     }
+
+
+    /**
+     * 需要token
+     *
+     * @return
+     */
+    @GetMapping("/authTest")
+    public ResponseResult authTest() {
+        return ResponseResult.success("auth test");
+    }
+
+    @GetMapping("/noauthTest")
+    public ResponseResult noauthTest() {
+        return ResponseResult.success("noauth test");
+    }
+
+
 }

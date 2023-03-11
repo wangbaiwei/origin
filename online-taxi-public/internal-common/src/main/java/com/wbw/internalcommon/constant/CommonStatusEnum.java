@@ -1,6 +1,5 @@
 package com.wbw.internalcommon.constant;
 
-import lombok.Data;
 import lombok.Getter;
 
 public enum CommonStatusEnum {
