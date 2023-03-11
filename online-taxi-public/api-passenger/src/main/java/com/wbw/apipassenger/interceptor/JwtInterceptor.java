@@ -1,6 +1,7 @@
 package com.wbw.apipassenger.interceptor;
 
 import com.auth0.jwt.exceptions.AlgorithmMismatchException;
+import com.auth0.jwt.exceptions.JWTDecodeException;
 import com.auth0.jwt.exceptions.SignatureVerificationException;
 import com.auth0.jwt.exceptions.TokenExpiredException;
 import com.wbw.internalcommon.dto.ResponseResult;
@@ -21,7 +22,8 @@ public class JwtInterceptor implements HandlerInterceptor {
         boolean result = true;
 
         String resultString = "";
-        String token = request.getHeader("Autorization");
+        String token = request.getHeader("Authorization");
+        System.out.println("token: " + token);
 
         try {
             TokenResult tokenResult = JwtUtils.parseToken(token);
@@ -33,6 +35,9 @@ public class JwtInterceptor implements HandlerInterceptor {
             result = false;
         } catch (AlgorithmMismatchException e) {
             resultString = "token AlgorithmMismatchException";
+            result = false;
+        } catch (JWTDecodeException e) {
+            resultString = "The string " + token + " doesn't have a valid JSON format";
             result = false;
         }
         if (!result) {
