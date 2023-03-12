@@ -1,7 +1,7 @@
 package com.wbw.servicepassengeruser.service;
 
 import com.wbw.internalcommon.dto.ResponseResult;
-import com.wbw.servicepassengeruser.dto.PassengerUser;
+import com.wbw.internalcommon.dto.PassengerUser;
 import com.wbw.servicepassengeruser.mapper.PassengerUserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

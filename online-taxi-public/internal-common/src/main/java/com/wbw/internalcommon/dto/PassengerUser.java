@@ -1,6 +1,7 @@
-package com.wbw.servicepassengeruser.dto;
+package com.wbw.internalcommon.dto;
 
 import lombok.Data;
+
 import java.time.LocalDate;
 
 @Data
@@ -13,4 +14,5 @@ public class PassengerUser {
     private String passengerName;
     private byte passengerGender;
     private byte state;
+    private String profilePhoto;
 }
