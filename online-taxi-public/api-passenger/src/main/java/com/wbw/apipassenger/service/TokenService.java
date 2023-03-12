@@ -33,7 +33,7 @@ public class TokenService {
         String identity = tokenResult.getIdentity();
 
         // 读取redis中的refreshToken
-        String refreshTokenKey = RedisPrefixUtils.generatorTokenKey(phone, identity, TokenConstans.ACCESS_TOKEN_TYPE);
+        String refreshTokenKey = RedisPrefixUtils.generatorTokenKey(phone, identity, TokenConstans.REFRESH_TOKEN_TYPE);
         String refreshTokenRedis = stringRedisTemplate.opsForValue().get(refreshTokenKey);
         // 校验refreshToken
         if (StringUtils.isBlank(refreshTokenRedis) || !refreshTokenSrc.trim().equals(refreshTokenRedis.trim())) {

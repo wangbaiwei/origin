@@ -6,7 +6,7 @@ public class RedisPrefixUtils {
     private static String verificationCodePrefix = "passenger-verification-code-";
 
     //
-    private static String tokenPrefix = "token_";
+    private static String tokenPrefix = "token-";
 
 
     /**

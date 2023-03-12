@@ -23,6 +23,8 @@ public class JwtUtils {
 
     private static final String JWT_TOKEN_TYPE = "tokenType";
 
+    private static final String JWT_TOKEN_TIME = "tokenTime";
+
 
     /**
      * 生成token
@@ -41,6 +43,7 @@ public class JwtUtils {
         Calendar calendar = Calendar.getInstance();
         calendar.add(Calendar.DATE, 1);
         Date time = calendar.getTime();
+        map.put(JWT_TOKEN_TIME, System.currentTimeMillis() + "");
         JWTCreator.Builder builder = JWT.create();
 
         // 整合map
@@ -74,11 +77,14 @@ public class JwtUtils {
      * 校验token
      */
     public static TokenResult checkToken(String token) {
+        TokenResult tokenResult = null;
         try {
-           return JwtUtils.parseToken(token);
+            tokenResult = JwtUtils.parseToken(token);
         } catch (Exception e) {
+            e.printStackTrace();
+            return null;
         }
-        return null;
+        return tokenResult;
     }
 
     public static void main(String[] args) {

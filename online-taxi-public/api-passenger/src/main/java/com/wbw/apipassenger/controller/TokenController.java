@@ -1,6 +1,5 @@
 package com.wbw.apipassenger.controller;
 
-import com.alibaba.nacos.common.model.RestResult;
 import com.wbw.apipassenger.response.TokenResponse;
 import com.wbw.apipassenger.service.TokenService;
 import com.wbw.internalcommon.dto.ResponseResult;
