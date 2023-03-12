@@ -1,6 +1,6 @@
 package com.wbw.internalcommon.constant;
 
-public class IdentityConstant {
+public class IdentityConstants {
 
     /**
      * 乘客身份
