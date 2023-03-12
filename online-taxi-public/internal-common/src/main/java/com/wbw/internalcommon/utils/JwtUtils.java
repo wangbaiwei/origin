@@ -5,6 +5,7 @@ import com.auth0.jwt.JWTCreator;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.interfaces.DecodedJWT;
 import com.wbw.internalcommon.dto.TokenResult;
+
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
@@ -67,6 +68,17 @@ public class JwtUtils {
         tokenResult.setPhone(phone);
         tokenResult.setIdentity(identity);
         return tokenResult;
+    }
+
+    /**
+     * 校验token
+     */
+    public static TokenResult checkToken(String token) {
+        try {
+           return JwtUtils.parseToken(token);
+        } catch (Exception e) {
+        }
+        return null;
     }
 
     public static void main(String[] args) {

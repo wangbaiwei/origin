@@ -1,9 +1,5 @@
 package com.wbw.apipassenger.interceptor;
 
-import com.auth0.jwt.exceptions.AlgorithmMismatchException;
-import com.auth0.jwt.exceptions.JWTDecodeException;
-import com.auth0.jwt.exceptions.SignatureVerificationException;
-import com.auth0.jwt.exceptions.TokenExpiredException;
 import com.wbw.internalcommon.constant.TokenConstans;
 import com.wbw.internalcommon.dto.ResponseResult;
 import com.wbw.internalcommon.dto.TokenResult;
@@ -32,24 +28,10 @@ public class JwtInterceptor implements HandlerInterceptor {
         String resultString = "";
         String token = request.getHeader("Authorization");
         System.out.println("token: " + token);
-        TokenResult tokenResult = null;
-        try {
-            tokenResult = JwtUtils.parseToken(token);
-        } catch (SignatureVerificationException e) {
-            resultString = "token sign error";
-            result = false;
-        } catch (TokenExpiredException e) {
-            resultString = "token time out";
-            result = false;
-        } catch (AlgorithmMismatchException e) {
-            resultString = "token AlgorithmMismatchException";
-            result = false;
-        } catch (JWTDecodeException e) {
-            resultString = "The string " + token + " doesn't have a valid JSON format";
-            result = false;
-        }
 
-        /// 从redis中取出token
+        TokenResult tokenResult = JwtUtils.checkToken(token);
+
+        // 从redis中取出token
         if (tokenResult == null) {
             resultString = "token invalid";
             result = false;
@@ -61,14 +43,9 @@ public class JwtInterceptor implements HandlerInterceptor {
             String tokenKey = RedisPrefixUtils.generatorTokenKey(phone, identity, TokenConstans.ACCESS_TOKEN_TYPE);
             // 从redis中取出token
             String tokenReids = stringRedisTemplate.opsForValue().get(tokenKey);
-            if (StringUtils.isBlank(tokenReids)) {
+            if (StringUtils.isBlank(tokenReids) || !token.trim().equals(tokenReids.trim())) {
                 resultString = "token invalid";
                 result = false;
-            } else {
-                if (!token.trim().equals(tokenReids.trim())) {
-                    resultString = "token invalid";
-                    result = false;
-                }
             }
         }
 
