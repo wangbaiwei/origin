@@ -1,7 +1,8 @@
 package com.wbw.servicepassengeruser.service;
 
-import com.wbw.internalcommon.dto.ResponseResult;
+import com.wbw.internalcommon.constant.CommonStatusEnum;
 import com.wbw.internalcommon.dto.PassengerUser;
+import com.wbw.internalcommon.dto.ResponseResult;
 import com.wbw.servicepassengeruser.mapper.PassengerUserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -43,5 +44,24 @@ public class UserService {
         return ResponseResult.success();
 
     }
+
+    /**
+     * 根据手机号查询用户信息
+     * @param passengerPhone
+     * @return
+     */
+    public ResponseResult getUserByPhone(String passengerPhone) {
+        // 根据手机号查询用户信息
+        Map<String, Object> map = new HashMap<>();
+        map.put("passenger_phone", passengerPhone);
+        List<PassengerUser> passengerUsers = passengerUserMapper.selectByMap(map);
+        if (passengerUsers.size() == 0) {
+            return ResponseResult.fail(CommonStatusEnum.USER_NOT_EXIT.getCode(), CommonStatusEnum.USER_NOT_EXIT.getValue());
+        } else {
+            PassengerUser passengerUser = passengerUsers.get(0);
+            return ResponseResult.success(passengerUser);
+        }
+    }
+
 
 }

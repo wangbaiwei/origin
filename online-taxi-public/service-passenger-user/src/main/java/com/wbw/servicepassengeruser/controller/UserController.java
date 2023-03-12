@@ -4,6 +4,7 @@ import com.wbw.internalcommon.dto.ResponseResult;
 import com.wbw.internalcommon.request.VerificationCodeDTD;
 import com.wbw.servicepassengeruser.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,6 +22,12 @@ public class UserController {
         System.out.println("乘客的手机号：" + passengerPhone);
         ResponseResult responseResult = userService.loginOrRegister(passengerPhone);
         return responseResult;
+    }
+
+    @GetMapping("/user")
+    public ResponseResult geUser(@RequestBody VerificationCodeDTD verificationCodeDTD) {
+        String passengerPhone = verificationCodeDTD.getPassengerPhone();
+        return userService.getUserByPhone(passengerPhone);
     }
 
 
