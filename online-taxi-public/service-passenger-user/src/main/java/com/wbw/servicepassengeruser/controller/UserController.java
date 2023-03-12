@@ -3,12 +3,11 @@ package com.wbw.servicepassengeruser.controller;
 import com.wbw.internalcommon.dto.ResponseResult;
 import com.wbw.internalcommon.request.VerificationCodeDTD;
 import com.wbw.servicepassengeruser.service.UserService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
+@Slf4j
 @RestController
 public class UserController {
 
@@ -24,9 +23,9 @@ public class UserController {
         return responseResult;
     }
 
-    @GetMapping("/user")
-    public ResponseResult geUser(@RequestBody VerificationCodeDTD verificationCodeDTD) {
-        String passengerPhone = verificationCodeDTD.getPassengerPhone();
+    @GetMapping("/user/{phone}")
+    public ResponseResult geUser(@PathVariable("phone") String passengerPhone) {
+        log.info("service-passenger-user get user by phone, phone: {}", passengerPhone);
         return userService.getUserByPhone(passengerPhone);
     }
 

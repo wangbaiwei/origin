@@ -1,5 +1,6 @@
 package com.wbw.apipassenger.controller;
 
+import com.wbw.apipassenger.remote.ServicePassengerUserClient;
 import com.wbw.apipassenger.service.UserService;
 import com.wbw.internalcommon.dto.PassengerUser;
 import com.wbw.internalcommon.dto.ResponseResult;
@@ -15,15 +16,13 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+
     @GetMapping("/users")
     public ResponseResult getUser(HttpServletRequest request) {
         // 从http请求中获取 accessToken
         String authorization = request.getHeader("Authorization");
 
-
         // 根据accessToken 查询用户信息
-
-
         ResponseResult userByAccessToken = userService.getUserByAccessToken(authorization);
         return userByAccessToken;
 
