@@ -1,8 +1,8 @@
 package com.wbw.apipassenger.service;
 
 
-import com.wbw.apipassenger.response.ForecastPriceResponse;
 import com.wbw.internalcommon.dto.ResponseResult;
+import com.wbw.internalcommon.response.ForecastPriceResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
