@@ -1,6 +1,7 @@
 package com.wbw.apipassenger.controller;
 
 
+import com.wbw.apipassenger.remote.ServicePriceClient;
 import com.wbw.apipassenger.service.ForeCastPriceService;
 import com.wbw.internalcommon.dto.ResponseResult;
 import com.wbw.internalcommon.request.ForecasePriceDTO;
@@ -24,6 +25,8 @@ public class ForeCastPriceController {
         String depLatitude = forecasePriceDTO.getDepLatitude();
         String desLongitude = forecasePriceDTO.getDesLongitude();
         String desLatitude = forecasePriceDTO.getDesLatitude();
+
+
 
         return foreCastPriceService.forecastPrice(depLongitude, depLatitude, desLongitude, desLatitude);
 

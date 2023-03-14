@@ -41,7 +41,7 @@ public class ForecastPriceService {
     public ResponseResult forecastPrice(String depLongitude, String depLatitude, String desLongitude, String desLatitude) {
 
         log.info("出发地的经度：{}, 出发地的维度：{}, 目的地的经度：{}, 目的地的维度：{}", depLongitude, depLatitude, desLongitude, desLatitude);
-        ForecasePriceDTO forecasePriceDTO = new ForecasePriceDTO();
+        ForecasePriceDTO forecasePriceDTO = ForecasePriceDTO.builder().build();
         forecasePriceDTO.setDepLongitude(depLongitude);
         forecasePriceDTO.setDepLatitude(depLatitude);
         forecasePriceDTO.setDesLongitude(desLongitude);
