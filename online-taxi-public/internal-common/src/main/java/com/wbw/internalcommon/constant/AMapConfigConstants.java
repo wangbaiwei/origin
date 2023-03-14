@@ -3,6 +3,8 @@ package com.wbw.internalcommon.constant;
 public class AMapConfigConstants {
 
     public static final String DIRECTION_URL = "https://restapi.amap.com/v3/direction/driving";
+    public static final String DISTRICT_URL = "https://restapi.amap.com/v3/config/district";
+
 
     /**
      * 路径规划 json key值
