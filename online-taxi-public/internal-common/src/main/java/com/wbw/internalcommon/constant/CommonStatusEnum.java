@@ -25,7 +25,12 @@ public enum CommonStatusEnum {
      * 计价规则不存在: 1300-1399
      */
 
-    PRICE_RULE_EMPTY(1300, "计价规则不存在");
+    PRICE_RULE_EMPTY(1300, "计价规则不存在"),
+    /**\
+     * 地图信息：1400到1499
+     */
+
+    MAP_DISTRICT_ERROR(1400, "请求地图错误");
 
     @Getter
     private int code;

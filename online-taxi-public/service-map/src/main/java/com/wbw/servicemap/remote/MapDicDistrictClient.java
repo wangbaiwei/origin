@@ -1,7 +1,6 @@
 package com.wbw.servicemap.remote;
 
 import com.wbw.internalcommon.constant.AMapConfigConstants;
-import com.wbw.internalcommon.dto.ResponseResult;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -19,10 +18,10 @@ public class MapDicDistrictClient {
     @Value("${amap.key}")
     private String amapKey;
 
-    // 拼装请求的url
-    StringBuilder url = new StringBuilder();
 
     public String dicDistrict(String keywords) {
+        // 拼装请求的url
+        StringBuilder url = new StringBuilder();
         url.append(AMapConfigConstants.DISTRICT_URL);
         url.append("?");
         url.append("keywords="+keywords);

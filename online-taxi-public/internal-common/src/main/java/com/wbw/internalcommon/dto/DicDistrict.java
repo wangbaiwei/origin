@@ -8,5 +8,5 @@ public class DicDistrict {
     private String addressCode;
     private String addressName;
     private String parentAddressCode;
-    private String level;
+    private int level;
 }
