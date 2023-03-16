@@ -1,0 +1,616 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7f44b5e1-12c6-48ad-b156-192c84317ca3" name="变更" comment="其他代码提交" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="module-info" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\java\repository" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../java/apache-maven-3.8.1" />
+        <option name="useMavenConfig" value="true" />
+        <option name="userSettingsFile" value="D:\java\apache-maven-3.8.1\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2MdwYfv1Gl0DltEawN15B4UvbdX" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="jdk.selected.JAVA_MODULE" value="11" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/service-dirver-user" />
+    <property name="project.structure.last.edited" value="模块" />
+    <property name="project.structure.proportion" value="0.20259741" />
+    <property name="project.structure.side.proportion" value="0.46372548" />
+    <property name="settings.editor.selected.configurable" value="preferences.general" />
+    <property name="show.run.dashboard.notification" value="false" />
+  </component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Study\online-taxi-public\api-boss\src\main\java\com\wbw\apiboss" />
+      <recent name="D:\Study\online-taxi-public\servce-dirver-user\src\main\java\com\wbw\servcedirveruser" />
+      <recent name="D:\Study\online-taxi-public\service-price\src\main\java\com\wbw\serviceprice" />
+      <recent name="D:\Study\online-taxi-public" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.wbw.apiboss.controller" />
+      <recent name="com.wbw.servcedirveruser.controller" />
+      <recent name="com.wbw.servicemap.service" />
+      <recent name="com.wbw.internalcommon.constant" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="MavenRunConfiguration" />
+        <option value="SpringBootApplicationConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="ForecastPriceService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.wbw.serviceprice.service.ForecastPriceService" />
+      <module name="service-price" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.wbw.serviceprice.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JwtUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.wbw.internalcommon.utils.JwtUtils" />
+      <module name="internal-common" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.wbw.internalcommon.utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ResponseResult" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.wbw.internalcommon.dto.ResponseResult" />
+      <module name="internal-common" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.wbw.internalcommon.dto.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ApiBossApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="api-boss" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wbw.apiboss.ApiBossApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ApiPassengerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="api-passenger" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.wbw.apipassenger.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wbw.apipassenger.ApiPassengerApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InternalCommonApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="internal-common" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wbw.internalcommon.InternalCommonApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServceDirverUserApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="service-dirver-user" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wbw.servcedirveruser.ServiceDirverUserApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServiceMapApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="service-map" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wbw.servicemap.ServiceMapApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServicePassengerUserApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="service-passenger-user" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.wbw.servicepassengeruser.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wbw.servicepassengeruser.ServicePassengerUserApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServicePriceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="service-price" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wbw.serviceprice.ServicePriceApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ServiceVerificationcodeApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="service-verificationcode" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wbw.serviceverificationcode.ServiceVerificationcodeApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Spring Boot.ServiceVerificationcodeApplication" />
+      <item itemvalue="Spring Boot.ServicePriceApplication" />
+      <item itemvalue="Spring Boot.InternalCommonApplication" />
+      <item itemvalue="Spring Boot.ServiceMapApplication" />
+      <item itemvalue="Spring Boot.ServceDirverUserApplication" />
+      <item itemvalue="Spring Boot.ApiBossApplication" />
+      <item itemvalue="Spring Boot.ApiPassengerApplication" />
+      <item itemvalue="Spring Boot.ServicePassengerUserApplication" />
+      <item itemvalue="应用程序.ResponseResult" />
+      <item itemvalue="应用程序.JwtUtils" />
+      <item itemvalue="应用程序.ForecastPriceService" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="应用程序.ForecastPriceService" />
+        <item itemvalue="Spring Boot.ApiPassengerApplication" />
+        <item itemvalue="Spring Boot.ServicePassengerUserApplication" />
+        <item itemvalue="应用程序.JwtUtils" />
+        <item itemvalue="应用程序.ResponseResult" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="默认任务">
+      <changelist id="7f44b5e1-12c6-48ad-b156-192c84317ca3" name="变更" comment="" />
+      <created>1678110816237</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1678110816237</updated>
+      <workItem from="1678110817474" duration="276000" />
+      <workItem from="1678111151764" duration="217000" />
+      <workItem from="1678111404904" duration="5931000" />
+      <workItem from="1678198633410" duration="8092000" />
+      <workItem from="1678369954959" duration="5384000" />
+      <workItem from="1678460935135" duration="8404000" />
+      <workItem from="1678497282672" duration="824000" />
+      <workItem from="1678499171288" duration="27554000" />
+      <workItem from="1678585951853" duration="26761000" />
+      <workItem from="1678711218513" duration="3353000" />
+      <workItem from="1678715549419" duration="420000" />
+      <workItem from="1678716161039" duration="642000" />
+      <workItem from="1678716917806" duration="975000" />
+      <workItem from="1678719288623" duration="5019000" />
+      <workItem from="1678807232512" duration="5055000" />
+      <workItem from="1678884418012" duration="3451000" />
+      <workItem from="1678888929035" duration="7084000" />
+      <workItem from="1678969802203" duration="9654000" />
+      <workItem from="1678982079436" duration="258000" />
+    </task>
+    <task id="LOCAL-00001" summary="online-taxi">
+      <created>1678111560270</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1678111560270</updated>
+    </task>
+    <task id="LOCAL-00002" summary="api">
+      <created>1678112341765</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1678112341765</updated>
+    </task>
+    <task id="LOCAL-00003" summary="api">
+      <created>1678112434290</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1678112434290</updated>
+    </task>
+    <task id="LOCAL-00004" summary="验证码服务">
+      <created>1678205992983</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1678205992983</updated>
+    </task>
+    <task id="LOCAL-00005" summary="验证码服务">
+      <created>1678206048584</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1678206048584</updated>
+    </task>
+    <task id="LOCAL-00006" summary="api-service调用获取验证码">
+      <created>1678468166658</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1678468166658</updated>
+    </task>
+    <task id="LOCAL-00007" summary="api-service调用获取验证码">
+      <created>1678468210244</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1678468210244</updated>
+    </task>
+    <task id="LOCAL-00008" summary="验证码存入到redis中">
+      <created>1678504473241</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1678504473241</updated>
+    </task>
+    <task id="LOCAL-00009" summary="校验验证码流程">
+      <created>1678505962477</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1678505962477</updated>
+    </task>
+    <task id="LOCAL-00010" summary="校验验证码">
+      <created>1678507411730</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1678507411730</updated>
+    </task>
+    <task id="LOCAL-00011" summary="乘客系统骨架设计">
+      <created>1678511316919</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1678511316919</updated>
+    </task>
+    <task id="LOCAL-00012" summary="用户注册">
+      <created>1678515165049</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1678515165049</updated>
+    </task>
+    <task id="LOCAL-00013" summary="注册到nacos">
+      <created>1678515725952</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1678515725952</updated>
+    </task>
+    <task id="LOCAL-00014" summary="api调用乘客服务">
+      <created>1678516543532</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1678516543532</updated>
+    </task>
+    <task id="LOCAL-00015" summary="token工具完成">
+      <created>1678533071406</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1678533071406</updated>
+    </task>
+    <task id="LOCAL-00016" summary="测试token的方法">
+      <created>1678534511733</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1678534511733</updated>
+    </task>
+    <task id="LOCAL-00017" summary="token拦截器的编写">
+      <created>1678539293342</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1678539293342</updated>
+    </task>
+    <task id="LOCAL-00018" summary="token拦截器测试">
+      <created>1678541083455</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1678541083455</updated>
+    </task>
+    <task id="LOCAL-00019" summary="token存入到redis中">
+      <created>1678541935644</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1678541935644</updated>
+    </task>
+    <task id="LOCAL-00020" summary="从redis读取token，并校验">
+      <created>1678543947407</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1678543947407</updated>
+    </task>
+    <task id="LOCAL-00021" summary="gitignore">
+      <created>1678585905801</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1678585905801</updated>
+    </task>
+    <task id="LOCAL-00022" summary="校验验证码改造">
+      <created>1678598650113</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1678598650113</updated>
+    </task>
+    <task id="LOCAL-00023" summary="刷新token代码编写">
+      <created>1678600283295</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1678600283295</updated>
+    </task>
+    <task id="LOCAL-00024" summary="刷新测试">
+      <created>1678602491198</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1678602491198</updated>
+    </task>
+    <task id="LOCAL-00025" summary="api-passenger代码编写">
+      <created>1678603783119</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1678603783119</updated>
+    </task>
+    <task id="LOCAL-00026" summary="service-passenger-user根据手机号码查询信息">
+      <created>1678605489664</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1678605489664</updated>
+    </task>
+    <task id="LOCAL-00027" summary="service-price">
+      <created>1678610403260</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1678610403260</updated>
+    </task>
+    <task id="LOCAL-00028" summary="service-map">
+      <created>1678611987279</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1678611987279</updated>
+    </task>
+    <task id="LOCAL-00029" summary="调用地图接口获取距离">
+      <created>1678619299720</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1678619299720</updated>
+    </task>
+    <task id="LOCAL-00030" summary="feign调用">
+      <created>1678621202545</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1678621202545</updated>
+    </task>
+    <task id="LOCAL-00031" summary="service-price计价计算完成">
+      <created>1678724171747</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1678724171747</updated>
+    </task>
+    <task id="LOCAL-00032" summary="预估价格编写完成">
+      <created>1678808000404</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1678808000404</updated>
+    </task>
+    <task id="LOCAL-00033" summary="预估价格优化">
+      <created>1678809722706</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1678809722706</updated>
+    </task>
+    <task id="LOCAL-00034" summary="请求地图地区字典接口">
+      <created>1678812886217</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1678812886217</updated>
+    </task>
+    <task id="LOCAL-00035" summary="地区字典获取">
+      <created>1678894036135</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1678894036135</updated>
+    </task>
+    <task id="LOCAL-00036" summary="service-driver-user插入司机完成">
+      <created>1678975461984</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1678975461984</updated>
+    </task>
+    <task id="LOCAL-00037" summary="api-boss">
+      <created>1678976273613</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1678976273613</updated>
+    </task>
+    <task id="LOCAL-00038" summary="模块重新命名">
+      <created>1678977623644</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1678977623644</updated>
+    </task>
+    <task id="LOCAL-00039" summary="司机信息修改提交">
+      <created>1678978557475</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1678978557475</updated>
+    </task>
+    <task id="LOCAL-00040" summary="api-boss修改">
+      <created>1678978946677</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1678978946677</updated>
+    </task>
+    <task id="LOCAL-00041" summary="其他代码提交">
+      <created>1678978970411</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1678978970411</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="application.yaml" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="token存入到redis中" />
+    <MESSAGE value="从redis读取token，并校验" />
+    <MESSAGE value="gitignore" />
+    <MESSAGE value="校验验证码改造" />
+    <MESSAGE value="刷新token代码编写" />
+    <MESSAGE value="刷新测试" />
+    <MESSAGE value="api-passenger代码编写" />
+    <MESSAGE value="service-passenger-user根据手机号码查询信息" />
+    <MESSAGE value="service-price" />
+    <MESSAGE value="service-map" />
+    <MESSAGE value="调用地图接口获取距离" />
+    <MESSAGE value="feign调用" />
+    <MESSAGE value="读取计价规则" />
+    <MESSAGE value="service-price计价计算完成" />
+    <MESSAGE value="预估价格编写完成" />
+    <MESSAGE value="预估价格优化" />
+    <MESSAGE value="拼装地区获取的url" />
+    <MESSAGE value="请求地图地区字典接口" />
+    <MESSAGE value="地区字典获取" />
+    <MESSAGE value="service-driver-user插入司机完成" />
+    <MESSAGE value="api-boss" />
+    <MESSAGE value="模块重新命名" />
+    <MESSAGE value="司机信息修改提交" />
+    <MESSAGE value="api-boss修改" />
+    <MESSAGE value="其他代码提交" />
+    <option name="LAST_COMMIT_MESSAGE" value="其他代码提交" />
+  </component>
+</project>
