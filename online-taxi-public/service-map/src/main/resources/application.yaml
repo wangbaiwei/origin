@@ -1,0 +1,18 @@
+server:
+  port: 8085
+
+spring:
+  application:
+    name: service-map
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/service-map?characterEncoding=utf8&allowPublicKeyRetrieval=true&connectTimeout=1000&socketTimeout=3000&autoReconnect=true&useUnicode=true&useSSL=false&serverTimezone=UTC
+    username: youth
+    password: youth
+
+amap:
+  key: ae903cd9c949a379e0e2c5419c53c3ee
