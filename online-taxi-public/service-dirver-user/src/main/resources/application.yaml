@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: servce-dirver-user
+    name: service-dirver-user
   cloud:
     nacos:
       discovery:

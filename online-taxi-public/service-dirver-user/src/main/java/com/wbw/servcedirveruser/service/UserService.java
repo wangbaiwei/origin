@@ -2,18 +2,17 @@ package com.wbw.servcedirveruser.service;
 
 import com.wbw.internalcommon.dto.DriverUser;
 import com.wbw.internalcommon.dto.ResponseResult;
-import com.wbw.servcedirveruser.mapper.DriverUserMapper;
+import com.wbw.servcedirveruser.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Service
-public class DriverUserService {
+public class UserService {
 
     @Autowired
-    private DriverUserMapper driverUserMapper;
+    private UserMapper driverUserMapper;
 
 
     public ResponseResult testGetDirverUser() {

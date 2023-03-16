@@ -8,7 +8,6 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="internal-common" />
-        <module name="servce-dirver-user" />
         <module name="api-boss" />
         <module name="api-passenger" />
         <module name="service-verificationcode" />
@@ -17,13 +16,16 @@
         <module name="service-passenger-user" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="service-dirver-user" target="11" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="api-boss" options="-parameters" />
       <module name="api-passenger" options="-parameters" />
       <module name="internal-common" options="-parameters" />
-      <module name="servce-dirver-user" options="-parameters" />
+      <module name="service-dirver-user" options="-parameters" />
       <module name="service-map" options="-parameters" />
       <module name="service-passenger-user" options="-parameters" />
       <module name="service-price" options="-parameters" />

@@ -8,12 +8,12 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <groupId>com.wbw</groupId>
-    <artifactId>servce-dirver-user</artifactId>
+    <artifactId>service-dirver-user</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>servce-dirver-user</name>
     <description>servce-dirver-user</description>
     <properties>
-        <java.version>17</java.version>
+        <java.version>11</java.version>
     </properties>
     <dependencies>
         <dependency>
