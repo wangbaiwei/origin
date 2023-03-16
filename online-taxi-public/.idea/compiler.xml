@@ -13,12 +13,10 @@
         <module name="service-verificationcode" />
         <module name="service-price" />
         <module name="service-map" />
+        <module name="service-dirver-user" />
         <module name="service-passenger-user" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="service-dirver-user" target="11" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">

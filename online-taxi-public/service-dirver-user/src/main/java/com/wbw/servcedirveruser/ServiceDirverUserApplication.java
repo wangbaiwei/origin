@@ -8,10 +8,10 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 @SpringBootApplication
 @EnableDiscoveryClient
 @MapperScan("com.wbw.servcedirveruser.mapper")
-public class ServceDirverUserApplication {
+public class ServiceDirverUserApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ServceDirverUserApplication.class, args);
+        SpringApplication.run(ServiceDirverUserApplication.class, args);
     }
 
 }
