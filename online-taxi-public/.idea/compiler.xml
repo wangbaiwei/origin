@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="internal-common" />
         <module name="servce-dirver-user" />
+        <module name="api-boss" />
         <module name="api-passenger" />
         <module name="service-verificationcode" />
         <module name="service-price" />
@@ -19,6 +20,7 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="api-boss" options="-parameters" />
       <module name="api-passenger" options="-parameters" />
       <module name="internal-common" options="-parameters" />
       <module name="servce-dirver-user" options="-parameters" />

@@ -20,6 +20,8 @@
         <module>service-verificationcode</module>
         <module>service-price</module>
         <module>service-map</module>
+        <module>servce-dirver-user</module>
+        <module>api-boss</module>
     </modules>
     <packaging>pom</packaging>
 
