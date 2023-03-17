@@ -14,9 +14,8 @@ import java.time.LocalDateTime;
  * @since 2023-03-17
  */
 @Data
-public class Car implements Serializable {
+public class Car {
 
-    private static final long serialVersionUID = 1L;
 
     private Long id;
 
@@ -165,7 +164,7 @@ public class Car implements Serializable {
     /**
      * 状态：0:有效，1：失效
      */
-    private Boolean state;
+    private int state;
 
     /**
      * 终端Id
