@@ -14,3 +14,9 @@ spring:
     username: youth
     password: youth
 
+logging:
+  level:
+    com.baomidou.mybatisplus: debug
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

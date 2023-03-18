@@ -3,7 +3,6 @@ package com.wbw.servcedirveruser.generator;
 import com.baomidou.mybatisplus.generator.FastAutoGenerator;
 import com.baomidou.mybatisplus.generator.config.OutputFile;
 import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
-
 import java.util.Collections;
 
 /**
