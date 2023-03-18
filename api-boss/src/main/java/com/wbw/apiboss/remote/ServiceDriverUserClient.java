@@ -2,6 +2,7 @@ package com.wbw.apiboss.remote;
 
 
 import com.wbw.internalcommon.dto.Car;
+import com.wbw.internalcommon.dto.DriverCarBindingRelationship;
 import com.wbw.internalcommon.dto.DriverUser;
 import com.wbw.internalcommon.dto.ResponseResult;
 import org.springframework.cloud.openfeign.FeignClient;
@@ -21,4 +22,10 @@ public interface ServiceDriverUserClient {
 
     @RequestMapping(method = RequestMethod.POST, value = "/car")
     ResponseResult addCar(@RequestBody Car car);
+
+    @RequestMapping(method = RequestMethod.POST, value = "/driver-car-binding-relationship/bind")
+    ResponseResult bind(@RequestBody DriverCarBindingRelationship driverCarBindingRelationship);
+
+    @RequestMapping(method = RequestMethod.POST, value = "/driver-car-binding-relationship/unbind")
+    ResponseResult unbind(@RequestBody DriverCarBindingRelationship driverCarBindingRelationship);
 }
