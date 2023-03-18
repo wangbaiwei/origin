@@ -8,4 +8,6 @@ public class VerificationCodeDTD {
     private String passengerPhone;
 
     private String verificationCode;
+
+    private String driverPhone;
 }
