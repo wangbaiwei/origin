@@ -1,18 +1,23 @@
 package com.wbw.servcedirveruser.service;
 
+import com.wbw.internalcommon.constant.CommonStatusEnum;
+import com.wbw.internalcommon.constant.DriverCarConstants;
 import com.wbw.internalcommon.dto.DriverUser;
 import com.wbw.internalcommon.dto.ResponseResult;
-import com.wbw.servcedirveruser.mapper.UserMapper;
+import com.wbw.servcedirveruser.mapper.DriverUserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 @Service
-public class UserService {
+public class DriverUserService {
 
     @Autowired
-    private UserMapper driverUserMapper;
+    private DriverUserMapper driverUserMapper;
 
 
     public ResponseResult testGetDirverUser() {
@@ -41,6 +46,21 @@ public class UserService {
         int insert = driverUserMapper.updateById(driverUser);
         return ResponseResult.success(insert);
 
+    }
+
+    public ResponseResult getDriverUserByPhone(String driverPhone) {
+
+
+        Map<String, Object> map = new HashMap<>();
+        map.put("driver_phone", driverPhone);
+        map.put("state", DriverCarConstants.DRIVER_STATE_VALID);
+        List<DriverUser> driverUsers = driverUserMapper.selectByMap(map);
+
+        if (driverUsers.isEmpty()) {
+            return ResponseResult.fail(CommonStatusEnum.DRIVER_NOT_EXISTS.getCode(), CommonStatusEnum.DRIVER_NOT_EXISTS.getValue());
+        }
+
+        return ResponseResult.success(driverUsers.get(0));
     }
 
 
