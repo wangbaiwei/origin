@@ -1,6 +1,7 @@
 package com.wbw.servcedirveruser.controller;
 
 
+import com.wbw.internalcommon.constant.DriverCarConstants;
 import com.wbw.internalcommon.dto.DriverUser;
 import com.wbw.internalcommon.dto.ResponseResult;
 import com.wbw.internalcommon.response.DriverUserExistsResponse;
@@ -48,9 +49,9 @@ public class DriverUserController {
         DriverUser driverPhoneDB = driverUserByPhone.getData();
         DriverUserExistsResponse response = new DriverUserExistsResponse();
 
-        int ifExists = 1;
+        int ifExists = DriverCarConstants.DRIVER_EXISTS;
         if (ObjectUtils.isEmpty(driverPhoneDB)) {
-            ifExists = 0;
+            ifExists = DriverCarConstants.DRIVER_NOT_EXISTS;
             response.setDriverPhone("");
             response.setIsExists(ifExists);
         } else {
