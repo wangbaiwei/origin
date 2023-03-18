@@ -1,10 +1,12 @@
 package com.wbw.apidriver.service;
 
 import com.wbw.apidriver.remote.ServiceDriverUserClient;
+import com.wbw.apidriver.remote.ServiceVerficationCodeClient;
 import com.wbw.internalcommon.constant.CommonStatusEnum;
 import com.wbw.internalcommon.constant.DriverCarConstants;
 import com.wbw.internalcommon.dto.ResponseResult;
 import com.wbw.internalcommon.response.DriverUserExistsResponse;
+import com.wbw.internalcommon.response.NumberCodeResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,6 +17,9 @@ public class VerificationCodeService {
 
     @Autowired
     private ServiceDriverUserClient serviceDriverUserClient;
+
+    @Autowired
+    private ServiceVerficationCodeClient serviceVerficationCodeClient;
 
     public ResponseResult checkAndSendVerificationCode(String driverPhone) {
 
@@ -30,6 +35,12 @@ public class VerificationCodeService {
 
 
         // 获取验证码
+        ResponseResult<NumberCodeResponse> verificationCode = serviceVerficationCodeClient.getVerificationCode(6);
+        NumberCodeResponse numberCodeResponse = verificationCode.getData();
+        int numberCode = numberCodeResponse.getNumberCode();
+        log.info("验证码：{}", numberCode);
+
+
 
         // 调用第三方发生验证码
 
