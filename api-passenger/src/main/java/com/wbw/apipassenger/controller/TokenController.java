@@ -1,6 +1,6 @@
 package com.wbw.apipassenger.controller;
 
-import com.wbw.apipassenger.response.TokenResponse;
+import com.wbw.internalcommon.response.TokenResponse;
 import com.wbw.apipassenger.service.TokenService;
 import com.wbw.internalcommon.dto.ResponseResult;
 import lombok.extern.slf4j.Slf4j;

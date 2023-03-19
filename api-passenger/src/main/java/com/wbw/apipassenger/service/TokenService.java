@@ -1,6 +1,6 @@
 package com.wbw.apipassenger.service;
 
-import com.wbw.apipassenger.response.TokenResponse;
+import com.wbw.internalcommon.response.TokenResponse;
 import com.wbw.internalcommon.constant.CommonStatusEnum;
 import com.wbw.internalcommon.constant.TokenConstans;
 import com.wbw.internalcommon.dto.ResponseResult;

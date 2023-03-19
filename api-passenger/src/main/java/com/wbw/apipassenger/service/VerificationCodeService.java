@@ -2,7 +2,7 @@ package com.wbw.apipassenger.service;
 
 import com.wbw.apipassenger.remote.ServicePassengerUserClient;
 import com.wbw.apipassenger.remote.ServiceVerificationcodeClient;
-import com.wbw.apipassenger.response.TokenResponse;
+import com.wbw.internalcommon.response.TokenResponse;
 import com.wbw.internalcommon.constant.CommonStatusEnum;
 import com.wbw.internalcommon.constant.IdentityConstants;
 import com.wbw.internalcommon.constant.TokenConstans;
@@ -95,7 +95,5 @@ public class VerificationCodeService {
         tokenResponse.setRefreshToken(refreshToken);
         tokenResponse.setAccessToken(accessToken);
         return ResponseResult.success(tokenResponse);
-
-
     }
 }
