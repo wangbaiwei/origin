@@ -4,12 +4,17 @@ import com.wbw.apidriver.remote.ServiceDriverUserClient;
 import com.wbw.apidriver.remote.ServiceVerficationCodeClient;
 import com.wbw.internalcommon.constant.CommonStatusEnum;
 import com.wbw.internalcommon.constant.DriverCarConstants;
+import com.wbw.internalcommon.constant.IdentityConstants;
 import com.wbw.internalcommon.dto.ResponseResult;
 import com.wbw.internalcommon.response.DriverUserExistsResponse;
 import com.wbw.internalcommon.response.NumberCodeResponse;
+import com.wbw.internalcommon.utils.RedisPrefixUtils;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
+
+import java.util.concurrent.TimeUnit;
 
 @Service
 @Slf4j
@@ -20,6 +25,9 @@ public class VerificationCodeService {
 
     @Autowired
     private ServiceVerficationCodeClient serviceVerficationCodeClient;
+
+    @Autowired
+    private StringRedisTemplate stringRedisTemplate;
 
     public ResponseResult checkAndSendVerificationCode(String driverPhone) {
 
@@ -40,12 +48,11 @@ public class VerificationCodeService {
         int numberCode = numberCodeResponse.getNumberCode();
         log.info("验证码：{}", numberCode);
 
-
-
-        // 调用第三方发生验证码
+        // 调用第三方发生验证码，第三方，阿里短信服务，腾讯，华信，容联
 
         // 存入redis
-
+        String key = RedisPrefixUtils.generatorKeyByPhone(driverPhone, IdentityConstants.DRIVER_IDENTITY);
+        stringRedisTemplate.opsForValue().set(key, numberCode + "", 2, TimeUnit.MINUTES);
         return ResponseResult.success(data);
     }
 }

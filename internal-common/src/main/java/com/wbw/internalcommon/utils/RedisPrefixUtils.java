@@ -3,7 +3,7 @@ package com.wbw.internalcommon.utils;
 public class RedisPrefixUtils {
 
     // 乘客验证码前缀
-    private static String verificationCodePrefix = "passenger-verification-code-";
+    private static String verificationCodePrefix = "verification-code-";
 
     //
     private static String tokenPrefix = "token-";
@@ -11,12 +11,11 @@ public class RedisPrefixUtils {
 
     /**
      * 根据手机号生成key
-     *
-     * @param passengerPhone
+     * @param phone
      * @return
      */
-    public static String generatorKeyByPhone(String passengerPhone) {
-        return verificationCodePrefix + passengerPhone;
+    public static String generatorKeyByPhone(String phone, String identity) {
+        return verificationCodePrefix + identity + "-" +phone;
     }
 
     /**

@@ -39,7 +39,7 @@ public class VerificationCodeService {
         int numberCode = numberCodeResponse.getData().getNumberCode();
         System.out.println("remote number code: " + numberCode);
 
-        String key = RedisPrefixUtils.generatorKeyByPhone(passengerPhone);
+        String key = RedisPrefixUtils.generatorKeyByPhone(passengerPhone, IdentityConstants.PASSENGER_IDENTITY);
         stringRedisTemplate.opsForValue().set(key, numberCode + "", 2, TimeUnit.MINUTES);
 
         // 通过短信服务商，将对应的验证码发送到手机上，以阿里短信服务，腾讯短信通，华信，客联
@@ -59,7 +59,7 @@ public class VerificationCodeService {
         // 根据手机号到redis读取验证码
         System.out.println("根据手机号到redis读取验证码");
         // 生成key
-        String key = RedisPrefixUtils.generatorKeyByPhone(passengerPhone);
+        String key = RedisPrefixUtils.generatorKeyByPhone(passengerPhone, IdentityConstants.PASSENGER_IDENTITY);
         // 更具key获取value
         String codeReids = stringRedisTemplate.opsForValue().get(key);
         System.out.println(key); // passenger-verification-code-18669945566
