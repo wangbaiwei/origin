@@ -18,7 +18,7 @@ public class MysqlGenerator {
                 }).packageConfig(builder -> {
                     builder.parent("com.wbw.servcedirveruser").pathInfo(Collections.singletonMap(OutputFile.mapperXml, "D:\\Study\\online-taxi-public\\service-dirver-user\\src\\main\\java\\com\\wbw\\servcedirveruser\\mapper"));
                 }).strategyConfig(builder -> {
-                    builder.addInclude("driver_car_binding_relationship");
+                    builder.addInclude("driver_user_work_status");
                 }).templateEngine(new FreemarkerTemplateEngine())
                 .execute();
     }

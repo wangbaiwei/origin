@@ -77,7 +77,7 @@ public class JwtUtils {
      * 校验token
      */
     public static TokenResult checkToken(String token) {
-        TokenResult tokenResult = null;
+        TokenResult tokenResult;
         try {
             tokenResult = JwtUtils.parseToken(token);
         } catch (Exception e) {
