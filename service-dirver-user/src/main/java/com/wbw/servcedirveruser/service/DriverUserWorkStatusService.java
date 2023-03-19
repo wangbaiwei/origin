@@ -9,6 +9,7 @@ import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -34,7 +35,10 @@ public class DriverUserWorkStatusService {
         List<DriverUserWorkStatus> driverUserWorkStatuses = driverUserWorkStatusMapper.selectByMap(map);
 
         DriverUserWorkStatus driverUserWorkStatus = driverUserWorkStatuses.get(0);
+        LocalDateTime now = LocalDateTime.now();
         driverUserWorkStatus.setWorkStatus(workStatus);
+        driverUserWorkStatus.setGmtCreate(now);
+        driverUserWorkStatus.setGmtModified(now);
 
         driverUserWorkStatusMapper.updateById(driverUserWorkStatus);
         return ResponseResult.success("");
