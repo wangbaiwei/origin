@@ -1,0 +1,88 @@
+服务创建
+{
+    "data": {
+        "name": "飞滴出行servce",
+        "sid": 901435
+    },
+    "errcode": 10000,
+    "errdetail": null,
+    "errmsg": "OK"
+}
+终端创建
+{
+    "data": {
+        "name": "车辆1",
+        "tid": 652590201,
+        "sid": 901435
+    },
+    "errcode": 10000,
+    "errdetail": null,
+    "errmsg": "OK"
+}
+
+{
+    "data": {
+        "name": "车辆1",
+        "tid": 652594454,
+        "sid": 901435
+    },
+    "errcode": 10000,
+    "errdetail": null,
+    "errmsg": "OK"
+}
+{
+    "data": {
+        "name": "车辆2",
+        "tid": 652593631,
+        "sid": 901435
+    },
+    "errcode": 10000,
+    "errdetail": null,
+    "errmsg": "OK"
+}
+
+创建轨迹
+{
+    "data": {
+        "trname": "测试轨迹",
+        "trid": 20
+    },
+    "errcode": 10000,
+    "errdetail": null,
+    "errmsg": "OK"
+}
+
+上传终端
+{
+    "data": {
+        "errorpoints": [
+            {
+                "_param_err_info": "locatetime",
+                "_err_point_index": 0,
+                "locatiion": "115.984067,40.029212",
+                "localdatetime": "1679235067"
+            }
+        ]
+    },
+    "errcode": 20100,
+    "errdetail": "PARTIAL_SUCCESS",
+    "errmsg": "OK"
+}
+
+
+key,ae903cd9c949a379e0e2c5419c53c3ee
+sid,901435
+tid,652593631
+trid,80
+points,
+[
+    {
+        "location":"115.984067,40.029212",
+        "localdatetime":"1679235067"
+    }
+]
+
+key,ae903cd9c949a379e0e2c5419c53c3ee
+sid,901435
+center,"40.029212,115.984067"
+radius,1000
