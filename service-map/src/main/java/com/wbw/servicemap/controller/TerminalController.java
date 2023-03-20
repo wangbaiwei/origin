@@ -1,7 +1,6 @@
 package com.wbw.servicemap.controller;
 
 import com.wbw.internalcommon.dto.ResponseResult;
-import com.wbw.servicemap.remote.TerminalClient;
 import com.wbw.servicemap.service.TerminalService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;

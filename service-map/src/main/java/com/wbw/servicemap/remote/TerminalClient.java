@@ -3,6 +3,7 @@ package com.wbw.servicemap.remote;
 import com.wbw.internalcommon.constant.AMapConfigConstants;
 import com.wbw.internalcommon.dto.ResponseResult;
 import com.wbw.internalcommon.response.TerminalResponse;
+import lombok.extern.slf4j.Slf4j;
 import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -11,6 +12,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 @Service
+@Slf4j
 public class TerminalClient {
 
     @Autowired
@@ -22,7 +24,7 @@ public class TerminalClient {
     @Value("${amap.sid}")
     private String sid;
 
-    public ResponseResult add(String name) {
+    public ResponseResult<TerminalResponse> add(String name) {
         // 拼装请求的url
         StringBuilder url = new StringBuilder();
         url.append(AMapConfigConstants.TERMINAL_ADD_URL);
@@ -36,6 +38,7 @@ public class TerminalClient {
         ResponseEntity<String> forEntity = restTemplate.postForEntity(url.toString(), null, String.class);
         String body = forEntity.getBody();
         JSONObject result = JSONObject.fromObject(body);
+        log.info("添加终端接口调用结果：{}", result);
         JSONObject data = result.getJSONObject("data");
         String tid = data.getString("tid");
 
