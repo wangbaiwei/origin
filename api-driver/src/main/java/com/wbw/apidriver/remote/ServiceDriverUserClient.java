@@ -1,5 +1,6 @@
 package com.wbw.apidriver.remote;
 
+import com.wbw.internalcommon.dto.Car;
 import com.wbw.internalcommon.dto.DriverUser;
 import com.wbw.internalcommon.dto.ResponseResult;
 import com.wbw.internalcommon.response.DriverUserExistsResponse;
@@ -14,4 +15,7 @@ public interface ServiceDriverUserClient {
 
     @RequestMapping(method = RequestMethod.GET, value = "/check-driver/{driverPhone}")
     ResponseResult<DriverUserExistsResponse> checkDriver(@PathVariable("driverPhone") String driverPhone);
+
+    @RequestMapping(method = RequestMethod.GET, value = "/car")
+    ResponseResult<Car> getBarById(@RequestParam Long carId);
 }

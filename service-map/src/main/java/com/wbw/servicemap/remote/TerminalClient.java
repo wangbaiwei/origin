@@ -24,7 +24,7 @@ public class TerminalClient {
     @Value("${amap.sid}")
     private String sid;
 
-    public ResponseResult<TerminalResponse> add(String name) {
+    public ResponseResult<TerminalResponse> add(String name, String desc) {
         // 拼装请求的url
         StringBuilder url = new StringBuilder();
         url.append(AMapConfigConstants.TERMINAL_ADD_URL);
@@ -34,6 +34,8 @@ public class TerminalClient {
         url.append("sid=" + sid);
         url.append("&");
         url.append("name=" + name);
+        url.append("&");
+        url.append("desc=" + desc);
 
         log.info("创建终端接口url:{}", url);
 
