@@ -2,7 +2,7 @@ package com.wbw.servicemap.remote;
 
 import com.wbw.internalcommon.constant.AMapConfigConstants;
 import com.wbw.internalcommon.dto.ResponseResult;
-import com.wbw.internalcommon.response.TerminalResponse;
+import com.wbw.internalcommon.response.TrackResponse;
 import lombok.extern.slf4j.Slf4j;
 import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +13,7 @@ import org.springframework.web.client.RestTemplate;
 
 @Service
 @Slf4j
-public class TerminalClient {
+public class TrackClient {
 
     @Autowired
     private RestTemplate restTemplate;
@@ -24,30 +24,29 @@ public class TerminalClient {
     @Value("${amap.sid}")
     private String sid;
 
-    public ResponseResult<TerminalResponse> add(String name) {
+    public ResponseResult<TrackResponse> add(String tid) {
         // 拼装请求的url
         StringBuilder url = new StringBuilder();
-        url.append(AMapConfigConstants.TERMINAL_ADD_URL);
+        url.append(AMapConfigConstants.TRACK_ADD_URL);
         url.append("?");
         url.append("key=" + amapKey);
         url.append("&");
         url.append("sid=" + sid);
         url.append("&");
-        url.append("name=" + name);
+        url.append("tid=" + tid);
 
-        log.info("创建终端接口url:{}", url);
-
+        log.info("创建轨迹url:{}", url);
         ResponseEntity<String> forEntity = restTemplate.postForEntity(url.toString(), null, String.class);
         String body = forEntity.getBody();
         JSONObject result = JSONObject.fromObject(body);
-        log.info("创建终端接口响应信息：{}", result);
+        log.info("创建轨迹接口响应信息：{}", result);
         JSONObject data = result.getJSONObject("data");
-        String tid = data.getString("tid");
+        String trid = data.getString("trid");
 
-        TerminalResponse terminalResponse = new TerminalResponse();
-        terminalResponse.setTid(tid);
-        return ResponseResult.success(terminalResponse);
-
+        String trname = data.has("trname") ? data.get("trname") + "" : "";
+        TrackResponse trackResponse = new TrackResponse();
+        trackResponse.setTrid(trid);
+        trackResponse.setTrname(trname);
+        return ResponseResult.success(trackResponse);
     }
 }
-

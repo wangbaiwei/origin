@@ -2,6 +2,7 @@ package com.wbw.servicemap.remote;
 
 import com.wbw.internalcommon.constant.AMapConfigConstants;
 import com.wbw.internalcommon.dto.ResponseResult;
+import com.wbw.internalcommon.request.PointRequest;
 import com.wbw.internalcommon.response.TerminalResponse;
 import lombok.extern.slf4j.Slf4j;
 import net.sf.json.JSONObject;
@@ -13,7 +14,7 @@ import org.springframework.web.client.RestTemplate;
 
 @Service
 @Slf4j
-public class TerminalClient {
+public class PointClient {
 
     @Autowired
     private RestTemplate restTemplate;
@@ -24,30 +25,27 @@ public class TerminalClient {
     @Value("${amap.sid}")
     private String sid;
 
-    public ResponseResult<TerminalResponse> add(String name) {
+    public ResponseResult<TerminalResponse> upload(PointRequest pointRequest) {
         // 拼装请求的url
         StringBuilder url = new StringBuilder();
-        url.append(AMapConfigConstants.TERMINAL_ADD_URL);
+        url.append(AMapConfigConstants.POINTS_UPLOAD_URL);
         url.append("?");
         url.append("key=" + amapKey);
         url.append("&");
         url.append("sid=" + sid);
         url.append("&");
-        url.append("name=" + name);
+        url.append("tid=" + pointRequest.getTid());
+        url.append("&");
+        url.append("points=" + pointRequest.getPoints());
 
-        log.info("创建终端接口url:{}", url);
+        log.info("轨迹点上传接口url:{}", url);
 
         ResponseEntity<String> forEntity = restTemplate.postForEntity(url.toString(), null, String.class);
         String body = forEntity.getBody();
         JSONObject result = JSONObject.fromObject(body);
-        log.info("创建终端接口响应信息：{}", result);
-        JSONObject data = result.getJSONObject("data");
-        String tid = data.getString("tid");
+        log.info("轨迹点上传接口响应信息：{}", result);
 
-        TerminalResponse terminalResponse = new TerminalResponse();
-        terminalResponse.setTid(tid);
-        return ResponseResult.success(terminalResponse);
+        return ResponseResult.success();
 
     }
 }
-
