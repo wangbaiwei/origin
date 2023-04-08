@@ -1,5 +1,6 @@
 package com.wbw.serviceprice.service;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.wbw.internalcommon.constant.CommonStatusEnum;
 import com.wbw.internalcommon.dto.PriceRule;
 import com.wbw.internalcommon.dto.ResponseResult;
@@ -38,7 +39,7 @@ public class ForecastPriceService {
      * @param desLatitude
      * @return
      */
-    public ResponseResult forecastPrice(String depLongitude, String depLatitude, String desLongitude, String desLatitude) {
+    public ResponseResult forecastPrice(String depLongitude, String depLatitude, String desLongitude, String desLatitude, String cityCode, String vehicleType) {
 
         log.info("出发地的经度：{}, 出发地的维度：{}, 目的地的经度：{}, 目的地的维度：{}", depLongitude, depLatitude, desLongitude, desLatitude);
         ForecasePriceDTO forecasePriceDTO = ForecasePriceDTO.builder().build();
@@ -46,6 +47,8 @@ public class ForecastPriceService {
         forecasePriceDTO.setDepLatitude(depLatitude);
         forecasePriceDTO.setDesLongitude(desLongitude);
         forecasePriceDTO.setDesLatitude(desLatitude);
+        forecasePriceDTO.setCityCode(cityCode);
+        forecasePriceDTO.setVehicleType(vehicleType);
 
         log.info("调用地图服务，查询距离和时长");
         ResponseResult<DirectionResponse> direction = serviceMapClient.direction(forecasePriceDTO);
@@ -55,11 +58,12 @@ public class ForecastPriceService {
 
 
         log.info("读取计价规则");
+        QueryWrapper<PriceRule> priceRuleQueryWrapper = new QueryWrapper<>();
+        priceRuleQueryWrapper.eq("city_code", cityCode);
+        priceRuleQueryWrapper.eq("vehicle_type", vehicleType);
+        priceRuleQueryWrapper.orderByDesc("fare_version");
 
-        Map<String, Object> queryMap = new HashMap<>();
-        queryMap.put("city_code", "110000");
-        queryMap.put("vehicle_type", "1");
-        List<PriceRule> priceRules = priceRuleMapper.selectByMap(queryMap);
+        List<PriceRule> priceRules = priceRuleMapper.selectList(priceRuleQueryWrapper);
 
         if (priceRules.size() == 0) {
             return ResponseResult.fail(CommonStatusEnum.PRICE_RULE_EMPTY.getCode(), CommonStatusEnum.PRICE_RULE_EMPTY.getValue());
@@ -71,6 +75,9 @@ public class ForecastPriceService {
         double price = getPrice(distance, duration, priceRule);
         ForecastPriceResponse forecastPriceResponse = new ForecastPriceResponse();
         forecastPriceResponse.setPrice(price);
+        forecastPriceResponse.setCityCode(cityCode);
+        forecastPriceResponse.setVehicleType(vehicleType);
+
         return ResponseResult.success(forecastPriceResponse);
 
     }
@@ -106,7 +113,7 @@ public class ForecastPriceService {
         price = BigDecimalUtil.add(price, mileFare);
 
         // 时长的分钟数
-        double time = BigDecimalUtil.divide(duration.doubleValue(), 60);
+        double time = BigDecimalUtil.divide(duration.intValue(), 60);
         // 计时单价
         double unitPricePerMinute = priceRule.getUnitPricePerMinute();
         // 时长费用

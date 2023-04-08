@@ -71,30 +71,4 @@ public class ResponseResult<T> {
     }
 
 
-    public static void main(String[] args) {
-
-        int[] nums = new int[] {3,1,4,2};
-        int p = 6;
-
-        System.out.println(minSubarray(nums, 6));
-
-
-    }
-
-    public static int minSubarray(int[] nums, int p) {
-        int n = nums.length, ans = n;
-        var s = new int[n + 1];
-        for (int i = 0; i < n; ++i)
-            s[i + 1] = (s[i] + nums[i]) % p;
-        int x = s[n];
-        if (x == 0) return 0;
-
-        var last = new HashMap<Integer, Integer>();
-        for (int i = 0; i <= n; ++i) {
-            last.put(s[i], i);
-            int j = last.getOrDefault((s[i] - x + p) % p, -n);
-            ans = Math.min(ans, i - j);
-        }
-        return ans < n ? ans : -1;
-    }
 }

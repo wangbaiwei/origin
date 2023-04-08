@@ -23,7 +23,9 @@ public class ForecastPriceController {
         String depLatitude = forecasePriceDTO.getDepLatitude();
         String desLongitude = forecasePriceDTO.getDesLongitude();
         String desLatitude = forecasePriceDTO.getDesLatitude();
-        ResponseResult responseResult = forecastPriceService.forecastPrice(depLongitude, depLatitude, desLongitude, desLatitude);
+        String cityCode = forecasePriceDTO.getCityCode();
+        String vehicleType = forecasePriceDTO.getVehicleType();
+        ResponseResult responseResult = forecastPriceService.forecastPrice(depLongitude, depLatitude, desLongitude, desLatitude, cityCode, vehicleType);
 
         return responseResult;
     }

@@ -25,16 +25,18 @@ public class ForeCastPriceService {
      * @param desLatitude
      * @return
      */
-    public ResponseResult forecastPrice(String depLongitude, String depLatitude, String desLongitude, String desLatitude) {
+    public ResponseResult forecastPrice(String depLongitude, String depLatitude, String desLongitude, String desLatitude, String cityCode, String vehicleType) {
 
-        log.info("出发地的经度：{}", depLongitude);
-        log.info("出发地的维度：{}", depLatitude);
-        log.info("目的地的经度：{}", desLongitude);
-        log.info("目的地的维度：{}", desLatitude);
 
         ForecasePriceDTO forecasePriceDTO = ForecasePriceDTO.builder()
-                .depLongitude(depLongitude).depLatitude(depLatitude)
-                .desLongitude(desLongitude).desLatitude(desLatitude).build();
+                .depLongitude(depLongitude)
+                .depLatitude(depLatitude)
+                .desLongitude(desLongitude)
+                .desLatitude(desLatitude)
+                .cityCode(cityCode)
+                .vehicleType(vehicleType)
+                .build();
+
         ResponseResult<ForecastPriceResponse> forecast = servicePriceClient.forecast(forecasePriceDTO);
         double price = forecast.getData().getPrice();
 
