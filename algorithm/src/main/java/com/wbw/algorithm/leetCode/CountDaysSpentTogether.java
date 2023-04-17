@@ -18,7 +18,7 @@ public class CountDaysSpentTogether {
         int arriveBobDay = calculate(arriveBob, preSum);
         int leaveAliceDay =  calculate(leaveAlice, preSum);
         int leaveBobDay = calculate(leaveBob, preSum);
-        return Math.min(leaveAliceDay, leaveBobDay) - Math.max(arriveAliceDay, arriveBobDay);
+        return Math.max(0, Math.min(leaveAliceDay, leaveBobDay) - Math.max(arriveAliceDay, arriveBobDay) + 1);
     }
 
     public int calculate(String dataStr, int[] preSum) {
