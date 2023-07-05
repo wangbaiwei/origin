@@ -9,7 +9,7 @@ public class InsertSort {
         int[] randomArr = CommonUtil.getRandomArr(20);
 
         CommonUtil.print(randomArr);
-        sort(randomArr);
+        insertSort(randomArr);
         CommonUtil.print(randomArr);
     }
 
@@ -22,6 +22,19 @@ public class InsertSort {
                 arr[j] = tmp;
                 j--;
             }
+        }
+    }
+
+
+    public static void insertSort(int[] arr) {
+        for (int i = 1; i < arr.length; i++) {
+            int insertV = arr[i];
+            int index = i - 1;
+            while (index >= 0 && insertV < arr[index]) {
+                arr[index + 1] = arr[index];
+                index--;
+            }
+            arr[index + 1] = insertV;
         }
     }
 }
