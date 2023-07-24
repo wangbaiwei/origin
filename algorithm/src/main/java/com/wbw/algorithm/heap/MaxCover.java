@@ -1,6 +1,9 @@
 package com.wbw.algorithm.heap;
 
+import java.net.HttpURLConnection;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.PriorityQueue;
 
 public class MaxCover {
@@ -49,8 +52,23 @@ public class MaxCover {
     }
 
     public static void main(String[] args) {
-        int[][] arr = new int[][]{{1, 2}, {2, 4}, {4, 5}};
-        int i = maxCover2(arr);
-        System.out.println(i);
+//        int[][] arr = new int[][]{{1, 2}, {2, 4}, {4, 5}};
+//        int i = maxCover2(arr);
+//        System.out.println(i);
+
+
+        System.out.println(kItemsWithMaximumSum(3, 2, 0, 2));
     }
+
+    public static int kItemsWithMaximumSum(int numOnes, int numZeros, int numNegOnes, int k) {
+
+
+        List<Integer> res = new ArrayList<>();
+        res.set(0, 10);
+        return k <= numOnes ? k : k > numOnes &&  k <= (numNegOnes + numZeros) ? numOnes : numOnes - (k - numOnes - numZeros);
+
+
+
+    }
+
 }

@@ -12,6 +12,10 @@ public class CommonUtil {
         return Stream.generate(() -> (int) (Math.random() * 10)).limit(size).mapToInt(e -> e).toArray();
     }
 
+    public static int[] getRandomArr(int size, int radix) {
+        return Stream.generate(() -> (int) (Math.random() * Math.pow(10, radix))).limit(size).mapToInt(e -> e).toArray();
+    }
+
 
     public static void swap(int[] arr, int i, int j) {
         int tmp = arr[i];
@@ -64,5 +68,8 @@ public class CommonUtil {
         }
         return pre;
     }
+
+
+
 
 }
