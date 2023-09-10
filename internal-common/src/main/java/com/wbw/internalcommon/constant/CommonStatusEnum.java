@@ -46,7 +46,11 @@ public enum CommonStatusEnum {
     /**
      * 订单:1600-1699
      */
-    ORDER_GING_ON(1600, "有正在经行的订单");
+    ORDER_GING_ON(1600, "有正在经行的订单"),
+    /**
+     * 下单异常
+     */
+    DEVICE_IS_BLACK(16001, "当前设备超过下单次数");
 
 
     @Getter

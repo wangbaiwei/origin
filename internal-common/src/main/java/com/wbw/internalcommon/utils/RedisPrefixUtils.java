@@ -7,6 +7,9 @@ public class RedisPrefixUtils {
 
     //
     private static String tokenPrefix = "token-";
+    // 黑名单设备号
+    public static String blackDeviceCodePrefix = "black-device-";
+
 
 
     /**
