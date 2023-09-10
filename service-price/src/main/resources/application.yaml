@@ -14,3 +14,9 @@ spring:
     url: jdbc:mysql://localhost:3306/service-price?characterEncoding=utf8&connectTimeout=1000&socketTimeout=3000&autoReconnect=true&useUnicode=true&useSSL=false&serverTimezone=UTC
     username: youth
     password: youth
+logging:
+  level:
+    com.baomidou: debug
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

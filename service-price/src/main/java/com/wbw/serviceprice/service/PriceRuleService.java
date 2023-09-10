@@ -5,6 +5,7 @@ import com.wbw.internalcommon.constant.CommonStatusEnum;
 import com.wbw.internalcommon.dto.PriceRule;
 import com.wbw.internalcommon.dto.ResponseResult;
 import com.wbw.serviceprice.mapper.PriceRuleMapper;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -13,6 +14,7 @@ import java.util.List;
 import java.util.Map;
 
 @Service
+@Slf4j
 public class PriceRuleService {
 
     @Autowired
@@ -94,6 +96,30 @@ public class PriceRuleService {
         priceRuleMapper.insert(priceRule);
 
         return ResponseResult.success();
+    }
+
+
+    /**
+     * 判断当前城市和车型的计价规则是否存在
+     *
+     * @param priceRule
+     * @return
+     */
+    public ResponseResult<Boolean> ifExists(PriceRule priceRule) {
+        log.info("请求信息：【{}】", priceRule);
+        String cityCode = priceRule.getCityCode();
+        String vehicleType = priceRule.getVehicleType();
+        QueryWrapper<PriceRule> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq("city_code", cityCode);
+        queryWrapper.eq("vehicle_type", vehicleType);
+        queryWrapper.orderByDesc("fare_version");
+        List<PriceRule> priceRules = priceRuleMapper.selectList(queryWrapper);
+
+        if (priceRules.size() > 0) {
+            return ResponseResult.success(true);
+        } else {
+            return ResponseResult.fail(false);
+        }
     }
 
 
