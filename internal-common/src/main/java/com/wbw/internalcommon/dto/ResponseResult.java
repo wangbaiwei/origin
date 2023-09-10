@@ -46,6 +46,9 @@ public class ResponseResult<T> {
     public static ResponseResult fail(int code, String message) {
         return new ResponseResult().setCode(code).setMessage(message);
     }
+    public static ResponseResult fail(CommonStatusEnum statusEnum) {
+        return new ResponseResult().setCode(statusEnum.getCode()).setMessage(statusEnum.getValue());
+    }
 
     /**
      * 自定义错误码和错误信息

@@ -7,7 +7,20 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 127.0.0.1:8848
+        server-addr: 192.168.84.138:8848
+    loadbalancer:
+      ribbon:
+        enabled: true
+    gateway:
+      routes:
+        - id: weight_high
+        uri: https://weighthign.org
+        predicates:
+          - Weight=group1, 8
+        - id: weight_high
+          uri: https://weightlow.org
+          predicates:
+            - Weight=group1, 2
   redis:
     host: 192.168.84.130
     port: 6379

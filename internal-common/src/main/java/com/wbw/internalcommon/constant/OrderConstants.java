@@ -1,9 +1,12 @@
 package com.wbw.internalcommon.constant;
 
 public class OrderConstants {
+    /**
+     * 订单无效
+     */
+    public static final int ORDER_INVALID = 0;
 
-
-    public static final int ORDER_STAT = 1;
+    public static final int ORDER_START = 1;
     /**
      * 司机去接单
      */
