@@ -205,4 +205,74 @@ public class Review {
             this.val = val;
         }
     }
+
+    @Test
+    public void test8() {
+        int[] arr = {1, 2, 3, 4, 5};
+        int sum = Arrays.stream(arr).sum();
+        System.out.println(sum);
+
+        int[] randomArr = getRandomArr(5, 1);
+        ListNode listNode = generateNodeList(arr);
+        ListNode listNode1 = removeNthFromEnd(listNode, 2);
+        print(listNode1);
+    }
+
+    public ListNode removeNthFromEnd(ListNode head, int n) {
+        int size = size(head);
+        int step = size - n - 2;
+        ListNode cur = head;
+        while (step-- >= 0) {
+            cur = cur.next;
+        }
+        cur.next = cur.next.next;
+        return head;
+
+
+    }
+
+    public int size(ListNode head) {
+        int size = 0;
+        ListNode cur = head;
+        while (cur != null) {
+            cur = cur.next;
+            size++;
+        }
+        return size;
+    }
+
+
+    @Test
+    public void test4() {
+
+        int[] ints = distributeCandies(7, 4);
+        System.out.println(Arrays.toString(ints));
+
+    }
+
+
+    public int[] distributeCandies(int candies, int num_people) {
+        int[] ans = new int[num_people];
+        // 发出去的糖果
+        int out = 0;
+        // 数组当前索引
+        int index = 0;
+        while (candies > 0) {
+            // 待分发的糖果数大于剩余的糖果数，将所有的糖果分发给当前的孩子
+            if (out + 1 > candies) {
+                out = candies;
+                candies = 0;
+            } else {
+                // 糖果充足，本次分发糖果在上一次的基础上加一
+                out++;
+            }
+            // 当前孩子拥有的糖果数为之前的加上当前分发的
+            ans[index % (num_people)] = ans[index % (num_people)] + out;
+            // 分发后总糖果数减去当前分发的
+            candies -= out;
+            // 指针下移
+            index++;
+        }
+        return ans;
+    }
 }
