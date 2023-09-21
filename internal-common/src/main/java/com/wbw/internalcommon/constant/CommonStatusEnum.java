@@ -50,7 +50,8 @@ public enum CommonStatusEnum {
     /**
      * 下单异常
      */
-    DEVICE_IS_BLACK(16001, "当前设备超过下单次数");
+    DEVICE_IS_BLACK(1601, "当前设备超过下单次数"),
+    CITY_SERVICE_NOT_SERVICE(1602, "当前城市不提供叫车服务");
 
 
     @Getter

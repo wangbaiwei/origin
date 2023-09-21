@@ -1,6 +1,7 @@
 package com.wbw.serviceprice.utils;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 
 public class BigDecimalUtil {
 
@@ -20,7 +21,7 @@ public class BigDecimalUtil {
         if (v2 <= 0) {
             throw new IllegalArgumentException("除数非法");
         }
-        return BigDecimal.valueOf(v1).divide(BigDecimal.valueOf(v2)).doubleValue();
+        return BigDecimal.valueOf(v1).divide(BigDecimal.valueOf(v2), 3, RoundingMode.HALF_UP).doubleValue();
     }
 
 

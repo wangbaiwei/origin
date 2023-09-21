@@ -13,4 +13,6 @@ public class ForecasePriceDTO {
     private String desLongitude;
     private String cityCode;
     private String vehicleType;
+    private String fareType;
+    private String fareVersion;
 }

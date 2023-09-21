@@ -38,12 +38,7 @@ public class ForeCastPriceService {
                 .build();
 
         ResponseResult<ForecastPriceResponse> forecast = servicePriceClient.forecast(forecasePriceDTO);
-        double price = forecast.getData().getPrice();
-
-        log.info("调用计价服务，计算价格");
-        ForecastPriceResponse forecastPriceResponse = new ForecastPriceResponse();
-        forecastPriceResponse.setPrice(price);
-        return ResponseResult.success(forecastPriceResponse);
+        return ResponseResult.success(forecast.getData());
 
     }
 

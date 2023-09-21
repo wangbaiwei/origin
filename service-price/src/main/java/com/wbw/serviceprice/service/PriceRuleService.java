@@ -1,5 +1,6 @@
 package com.wbw.serviceprice.service;
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.wbw.internalcommon.constant.CommonStatusEnum;
 import com.wbw.internalcommon.dto.PriceRule;
@@ -8,6 +9,7 @@ import com.wbw.serviceprice.mapper.PriceRuleMapper;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.HashMap;
 import java.util.List;
@@ -26,7 +28,7 @@ public class PriceRuleService {
         // 拼接fareType
         String cityCode = priceRule.getCityCode();
         String vehicleType = priceRule.getVehicleType();
-        String fareType = cityCode + vehicleType;
+        String fareType = cityCode + "$" + vehicleType;
         priceRule.setFareType(fareType);
 
 
@@ -44,7 +46,7 @@ public class PriceRuleService {
         List<PriceRule> priceRules = priceRuleMapper.selectList(priceRuleQueryWrapper);
         int fareVersion = 0;
         if (priceRules.size() > 0) {
-            return ResponseResult.fail(CommonStatusEnum.PRICE_RULE_EXISTS.getCode(), CommonStatusEnum.PRICE_RULE_EXISTS.getValue());
+            fareVersion = priceRules.get(0).getFareVersion();
         }
 
         priceRule.setFareVersion(++fareVersion);
@@ -120,6 +122,37 @@ public class PriceRuleService {
         } else {
             return ResponseResult.fail(false);
         }
+    }
+
+
+    public ResponseResult<PriceRule> getNewestVersion(@RequestParam String fareType) {
+
+        LambdaQueryWrapper<PriceRule> wrapper = new LambdaQueryWrapper<>();
+        wrapper.eq(PriceRule::getFareType, fareType).orderByDesc(PriceRule::getFareVersion);
+
+        List<PriceRule> priceRules = priceRuleMapper.selectList(wrapper);
+        if (priceRules.size() > 0) {
+            return ResponseResult.success(priceRules.get(0));
+        } else {
+            return ResponseResult.fail(CommonStatusEnum.PRICE_RULE_EMPTY);
+        }
+    }
+
+    public ResponseResult<PriceRule> isNew(@RequestParam String fareType, @RequestParam int fareVersion) {
+        ResponseResult<PriceRule> newestVersion = getNewestVersion(fareType);
+        if (newestVersion.getCode() == CommonStatusEnum.PRICE_RULE_EMPTY.getCode()) {
+            return ResponseResult.fail(CommonStatusEnum.PRICE_RULE_EMPTY.getCode(), CommonStatusEnum.PRICE_RULE_EMPTY.getValue());
+        }
+
+        PriceRule priceRule = newestVersion.getData();
+        Integer versionDB = priceRule.getFareVersion();
+        if (versionDB > fareVersion) {
+            return ResponseResult.success(false);
+        } else {
+            return ResponseResult.success(true);
+        }
+
+
     }
 
 

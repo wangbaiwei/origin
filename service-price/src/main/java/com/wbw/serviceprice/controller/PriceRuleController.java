@@ -4,7 +4,6 @@ package com.wbw.serviceprice.controller;
 import com.wbw.internalcommon.dto.PriceRule;
 import com.wbw.internalcommon.dto.ResponseResult;
 import com.wbw.serviceprice.service.PriceRuleService;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -37,6 +36,26 @@ public class PriceRuleController {
     @GetMapping("/price-rule/get/if-exists")
     public ResponseResult<Boolean> isExists(@RequestBody PriceRule priceRule) {
         return priceRuleService.ifExists(priceRule);
+    }
+
+
+    /**
+     * 查询最新的计价规则
+     *
+     * @param fareType
+     * @return
+     */
+    @GetMapping("/get-newest-version")
+    public ResponseResult getNewestVersion(@RequestParam String fareType) {
+        return priceRuleService.getNewestVersion(fareType);
+    }
+
+    /**
+     * 是否是最新计价规则
+     */
+    @GetMapping("/is-new")
+    public ResponseResult isNew(@RequestParam String fareType, @RequestParam int fareVersion) {
+        return priceRuleService.isNew(fareType, fareVersion);
     }
 
 }
