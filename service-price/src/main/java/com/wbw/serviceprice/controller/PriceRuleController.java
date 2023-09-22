@@ -33,7 +33,7 @@ public class PriceRuleController {
      * @param priceRule
      * @return
      */
-    @GetMapping("/price-rule/get/if-exists")
+    @PostMapping("/if-exists")
     public ResponseResult<Boolean> isExists(@RequestBody PriceRule priceRule) {
         return priceRuleService.ifExists(priceRule);
     }
@@ -54,7 +54,7 @@ public class PriceRuleController {
      * 是否是最新计价规则
      */
     @GetMapping("/is-new")
-    public ResponseResult isNew(@RequestParam String fareType, @RequestParam int fareVersion) {
+    public ResponseResult<Boolean> isNew(@RequestParam String fareType, @RequestParam int fareVersion) {
         return priceRuleService.isNew(fareType, fareVersion);
     }
 

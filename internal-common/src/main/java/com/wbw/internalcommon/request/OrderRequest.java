@@ -9,7 +9,7 @@ public class OrderRequest {
     /**
      * 乘客ID
      */
-    private String passengerId;
+    private Long passengerId;
     /**
      * 乘客手机号
      */
@@ -19,16 +19,16 @@ public class OrderRequest {
     private LocalDateTime departTime;
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime orderTime;
-    private String depature;
-    private String deplongitude;
+    private String departure;
+    private String depLongitude;
     private String depLatitude;
     private String destination;
-    private String destinatitude;
+    private String destLongitude;
     private String destLatitude;
     /**
      * 坐标加密标识 1：gcj-01,2:wgs84,3:bd-09,4:cgcs2000北斗,0:其它
      */
-    private String encrypt;
+    private Integer encrypt;
     /**
      * 运价类型编码
      */
@@ -36,7 +36,7 @@ public class OrderRequest {
     /**
      * 运价版本
      */
-    private String fareVersion;
+    private Integer fareVersion;
     /**
      * 设备编号
      */

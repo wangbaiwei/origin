@@ -43,6 +43,12 @@ public class OrderInfoService {
 
     public ResponseResult add(OrderRequest orderRequest) {
 
+        ResponseResult<Boolean> aNew = servicePriceClient.isNew(orderRequest.getFareType(), orderRequest.getFareVersion());
+        if (!aNew.getData()) {
+            ResponseResult.fail(CommonStatusEnum.PRICE_RULE_CHANGED.getCode(), CommonStatusEnum.PRICE_RULE_CHANGED.getValue());
+        }
+
+
         // 判断有正在进行的订单不允许下单
         if (isOrderGoingOn(orderRequest.getPassengerId()) > 0) {
             return ResponseResult.fail(CommonStatusEnum.ORDER_GING_ON);
@@ -52,7 +58,7 @@ public class OrderInfoService {
             return ResponseResult.fail(CommonStatusEnum.DEVICE_IS_BLACK);
         }
 
-        // 判断：下单的城市计价规则是否正常
+        // 判断：下单的城市计价规则是否存在
         if (!isPriceRuleExists(orderRequest)) {
             return ResponseResult.fail(CommonStatusEnum.CITY_SERVICE_NOT_SERVICE);
         }
@@ -114,7 +120,7 @@ public class OrderInfoService {
      * @param passengerId
      * @return
      */
-    private Integer isOrderGoingOn(String passengerId) {
+    private Integer isOrderGoingOn(Long passengerId) {
         QueryWrapper<OrderInfo> queryWrapper = new QueryWrapper<>();
         queryWrapper.eq("passenger_id", passengerId);
         queryWrapper.and(wrapper -> wrapper.eq("order_status", OrderConstants.ORDER_START))
