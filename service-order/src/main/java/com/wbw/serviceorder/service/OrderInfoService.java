@@ -13,6 +13,8 @@ import com.wbw.serviceorder.mapper.OrderInfoMapper;
 import com.wbw.serviceorder.remote.ServiceMapClient;
 import com.wbw.serviceorder.remote.ServicePriceClient;
 import lombok.extern.slf4j.Slf4j;
+import net.sf.json.JSONArray;
+import net.sf.json.JSONObject;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -118,6 +120,13 @@ public class OrderInfoService {
             // 获得终端
 
             // 解析终端
+            JSONArray result = JSONArray.fromObject(listResponseResult.getData());
+            for (int i = 0; i < result.size(); i++) {
+                JSONObject jsonObject = result.getJSONObject(i);
+                String carIdStr = jsonObject.getString("carId");
+                long carId = Long.parseLong(carIdStr);
+            }
+
 
             // 根据解析出来的终端，查询车辆
 

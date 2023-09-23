@@ -44,6 +44,7 @@ public enum CommonStatusEnum {
     DRIVER_BIND_EXISTS(1503, "司机已被绑定，请勿重复绑定"),
     CAR_BIND_EXISTS(1504, "车辆已被绑定，请勿重复绑定"),
     CITY_DRIVER_EMPTY(1505, "当前城市没有可用的司机"),
+    AVALIABLE_DRIVER_EMPTY(1506, "可用的司机为空"),
 
     /**
      * 订单:1600-1699

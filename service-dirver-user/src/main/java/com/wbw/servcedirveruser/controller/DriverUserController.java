@@ -5,11 +5,11 @@ import com.wbw.internalcommon.constant.DriverCarConstants;
 import com.wbw.internalcommon.dto.DriverUser;
 import com.wbw.internalcommon.dto.ResponseResult;
 import com.wbw.internalcommon.response.DriverUserExistsResponse;
+import com.wbw.internalcommon.response.OrderDriverResponse;
 import com.wbw.servcedirveruser.service.DriverUserService;
 import lombok.extern.slf4j.Slf4j;
 import net.sf.json.JSONObject;
 import org.apache.commons.lang3.ObjectUtils;
-import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -60,7 +60,17 @@ public class DriverUserController {
         }
 
 
-
         return ResponseResult.success(response);
+    }
+
+    /**
+     * 根据车辆id查询需要的斯基的信息
+     *
+     * @param carId
+     * @return
+     */
+    @GetMapping("/get-avaliable-driver/{carId}")
+    ResponseResult<OrderDriverResponse> getAvaliableDriver(@PathVariable("carId") Long carId) {
+        return driverUserService.getAvaliableDriver(carId);
     }
 }
