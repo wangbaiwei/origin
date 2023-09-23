@@ -5,12 +5,14 @@ import com.auth0.jwt.JWTCreator;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.auth0.jwt.interfaces.DecodedJWT;
 import com.wbw.internalcommon.dto.TokenResult;
+import lombok.extern.slf4j.Slf4j;
 
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
+@Slf4j
 public class JwtUtils {
 
     // 盐
@@ -64,6 +66,7 @@ public class JwtUtils {
      * 解析token
      */
     public static TokenResult parseToken(String token) {
+        log.info("token:{}", token);
         DecodedJWT verify = JWT.require(Algorithm.HMAC256(SIGN)).build().verify(token);
         String phone = verify.getClaim(JWT_KEY_PHONE).asString();
         String identity = verify.getClaim(JWT_KEY_IDENTITY).asString();

@@ -11,6 +11,7 @@ import com.wbw.internalcommon.response.OrderDriverResponse;
 import com.wbw.servcedirveruser.mapper.DriverCarBindingRelationshipMapper;
 import com.wbw.servcedirveruser.mapper.DriverUserMapper;
 import com.wbw.servcedirveruser.mapper.DriverUserWorkStatusMapper;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -21,6 +22,7 @@ import java.util.List;
 import java.util.Map;
 
 @Service
+@Slf4j
 public class DriverUserService {
 
     @Autowired
@@ -43,7 +45,8 @@ public class DriverUserService {
 
         // 初始化工作状态表
         DriverUserWorkStatus driverUserWorkStatus = new DriverUserWorkStatus();
-        driverUserWorkStatus.setDriverId(DriverCarConstants.DRIVER_WORK_STATUS_STOP);
+        driverUserWorkStatus.setDriverId(driverUser.getId());
+        driverUserWorkStatus.setWorkStatus(DriverCarConstants.DRIVER_WORK_STATUS_STOP);
         driverUserWorkStatus.setGmtCreate(now);
         driverUserWorkStatus.setGmtModified(now);
         driverUserWorkStatusMapper.insert(driverUserWorkStatus);
@@ -67,8 +70,9 @@ public class DriverUserService {
         Map<String, Object> map = new HashMap<>();
         map.put("driver_phone", driverPhone);
         map.put("state", DriverCarConstants.DRIVER_STATE_VALID);
+        log.info("通过手机号查询司机信息参数：{}", map);
         List<DriverUser> driverUsers = driverUserMapper.selectByMap(map);
-
+        log.info("通过手机号查询司机信息结果：{}", driverUsers);
         if (driverUsers.isEmpty()) {
             return ResponseResult.fail(CommonStatusEnum.DRIVER_NOT_EXISTS.getCode(), CommonStatusEnum.DRIVER_NOT_EXISTS.getValue());
         }

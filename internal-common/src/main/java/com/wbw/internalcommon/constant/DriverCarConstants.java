@@ -30,17 +30,17 @@ public class DriverCarConstants {
     /**
      * 司机工作状态：0：收车
      */
-    public static long DRIVER_WORK_STATUS_STOP = 0;
+    public static int DRIVER_WORK_STATUS_STOP = 0;
 
     /**
      * 司机工作状态：1：出车
      */
-    public static long DRIVER_WORK_STATUS_START = 1;
+    public static int DRIVER_WORK_STATUS_START = 1;
 
     /**
      * 司机工作状态：2：暂停
      */
-    public static long DRIVER_WORK_STATUS_SUSPEND = 2;
+    public static int DRIVER_WORK_STATUS_SUSPEND = 2;
 
 
 }

@@ -3,13 +3,14 @@ package com.wbw.internalcommon.dto;
 
 import lombok.Data;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Data
-public class DriverUser {
+public class DriverUser implements Serializable {
 
-    private Long id;;
+    private Long id;
     private String address;
     private String driverName;
     private String driverPhone;
