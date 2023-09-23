@@ -7,16 +7,21 @@ import com.wbw.internalcommon.dto.OrderInfo;
 import com.wbw.internalcommon.dto.PriceRule;
 import com.wbw.internalcommon.dto.ResponseResult;
 import com.wbw.internalcommon.request.OrderRequest;
+import com.wbw.internalcommon.response.TerminalResponse;
 import com.wbw.internalcommon.utils.RedisPrefixUtils;
 import com.wbw.serviceorder.mapper.OrderInfoMapper;
+import com.wbw.serviceorder.remote.ServiceMapClient;
 import com.wbw.serviceorder.remote.ServicePriceClient;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 /**
@@ -41,7 +46,18 @@ public class OrderInfoService {
     @Autowired
     private ServicePriceClient servicePriceClient;
 
+    @Autowired
+    private ServiceMapClient serviceMapClient;
+
+    @Autowired
+    ServerDriverUserClient serverDriverUserClient;
+
     public ResponseResult add(OrderRequest orderRequest) {
+        ResponseResult<Boolean> avaliableDriver = serverDriverUserClient.isAvaliableDriver(orderRequest.getAddress());
+        log.info("测试城市是否有司机：{}", avaliableDriver.getData());
+        if (!avaliableDriver.getData()) {
+            ResponseResult.fail(CommonStatusEnum.CITY_DRIVER_EMPTY);
+        }
 
         ResponseResult<Boolean> aNew = servicePriceClient.isNew(orderRequest.getFareType(), orderRequest.getFareVersion());
         if (!aNew.getData()) {
@@ -50,13 +66,13 @@ public class OrderInfoService {
 
 
         // 判断有正在进行的订单不允许下单
-        if (isOrderGoingOn(orderRequest.getPassengerId()) > 0) {
-            return ResponseResult.fail(CommonStatusEnum.ORDER_GING_ON);
-        }
+//        if (isOrderGoingOn(orderRequest.getPassengerId()) > 0) {
+//            return ResponseResult.fail(CommonStatusEnum.ORDER_GING_ON);
+//        }
         // 校验当前下单设备是否是黑名单设备
-        if (isBlaceDevice(orderRequest)) {
-            return ResponseResult.fail(CommonStatusEnum.DEVICE_IS_BLACK);
-        }
+//        if (isBlaceDevice(orderRequest)) {
+//            return ResponseResult.fail(CommonStatusEnum.DEVICE_IS_BLACK);
+//        }
 
         // 判断：下单的城市计价规则是否存在
         if (!isPriceRuleExists(orderRequest)) {
@@ -71,7 +87,42 @@ public class OrderInfoService {
         orderInfo.setGmtModified(now);
 
         orderInfoMapper.insert(orderInfo);
+
+        // 派单
+        dispatchRealTimeOrder(orderInfo);
         return ResponseResult.success();
+
+    }
+
+    /**
+     * 实时订单派单逻辑
+     *
+     * @param orderInfo
+     * @return
+     */
+    public void dispatchRealTimeOrder(OrderInfo orderInfo) {
+        String depLongitude = orderInfo.getDepLongitude();
+        String depLatitude = orderInfo.getDepLatitude();
+        String center = StringUtils.join(depLatitude, ",", depLongitude);
+
+        List<Integer> radiusList = new ArrayList<>();
+        radiusList.add(2000);
+        radiusList.add(4000);
+        radiusList.add(5000);
+
+        ResponseResult<List<TerminalResponse>> listResponseResult = null;
+        for (Integer radius : radiusList) {
+            listResponseResult = serviceMapClient.terminalAroundSearch(center, radius);
+            log.info("在半径为：{}出寻找车辆", radius);
+            log.info(listResponseResult.getData().toString());
+            // 获得终端
+
+            // 解析终端
+
+            // 根据解析出来的终端，查询车辆
+
+            // 找到符合的车辆，进行派单
+        }
 
     }
 

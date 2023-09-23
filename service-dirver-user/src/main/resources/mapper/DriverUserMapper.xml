@@ -2,8 +2,8 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.wbw.servcedirveruser.mapper.DriverUserMapper">
 
-    <select id="select1" parameterType="string" resultMap="integer">
-        select count (*) from service-driver-user
+    <select id="selectDriverUserCountByCityCode" parameterType="string" resultType="integer">
+        SELECT COUNT(*) FROM v_city_driver_user_work_status WHERE city_code = #{cityCode}
     </select>
 
 
